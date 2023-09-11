@@ -41,7 +41,7 @@ export const ContactForm = () => {
   return (
     <>
     {sent ? 
-      (<p className="text-lg text-green-700">Your message has been sent! Please expect to hear from us within 1-2 business days!"</p>) : 
+      (<p className="text-lg text-green-700">Your message has been sent! Please expect to hear from us within 1-2 business days!</p>) : 
       (
         <form className="flex flex-col justify-between h-full w-full lg:w-[80%]" onSubmit={handleSubmit}>
             <label className="flex flex-col mb-6">
