@@ -1,4 +1,9 @@
 
+export const metadata = {
+  title: 'Kisil RES | Home',
+  description: 'Buying and selling homes in Toronto, Mississauga, and the GTA!',
+}
+
 
 const Home = () => {
 

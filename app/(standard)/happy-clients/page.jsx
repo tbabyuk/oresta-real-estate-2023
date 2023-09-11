@@ -1,4 +1,8 @@
 
+export const metadata = {
+  title: 'Kisil RES | Happy Clients',
+  description: 'See what our clients are saying!',
+}
 
 const HappyClients = () => {
   
