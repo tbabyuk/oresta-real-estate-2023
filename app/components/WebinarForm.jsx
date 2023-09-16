@@ -36,7 +36,7 @@ export const WebinarForm = () => {
   return (
     <>
     {sent ? 
-      (<p className="text-lg text-green-500">Congratulations - you have successfully registered for the Webinar!<br /> Please check your email for details on how to join!</p>) : 
+      (<p className="text-lg text-green-500">Congratulations - you have successfully registered for the Webinar!<br /> Please use the following link to join the webinar: <a href="https://us02web.zoom.us/webinar/register/WN_luspGAoWRwSUY8mwq5MylA#/registration" target="_blank" className="text-gray-50 hover:underline">https://us02web.zoom.us/webinar/register/WN_luspGAoWRwSUY8mwq5MylA#/registration</a></p>) : 
       (<form className="w-[330px] mx-auto flex flex-col" onSubmit={handleSubmit}>
           <label className="mb-10 flex flex-col">
               <span className="text-gray-50 text-lg font-light self-start">Name:</span>

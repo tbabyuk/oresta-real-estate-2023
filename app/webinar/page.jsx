@@ -41,17 +41,6 @@ const PageWebinar = () => {
         <div className="date px-5 py-16 bg-oresta-primary min-h-[300px] text-center">
             <p className="text-xl md:text-2xl font-light text-gray-50 mb-16">To register and reserve your spot, simply fill out your name and email address below:</p>
             <WebinarForm />
-            {/* <form className="w-[330px] mx-auto flex flex-col" onSubmit={handleSubmit}>
-                <label className="mb-14 flex flex-col">
-                    <span className="text-gray-50 text-lg font-light self-start">Name:</span>
-                    <input type="text" className="h-8 rounded ps-2" required />
-                </label>
-                <label className="mb-14 flex flex-col">
-                    <span className="text-gray-50 text-lg font-light self-start">Email:</span>
-                    <input type="email" className="h-8 rounded ps-2" required />
-                </label>
-                <button className="bg-orange-400 text-gray-100 w-full h-12 mx-auto px-14 rounded hover:bg-orange-500">Reserve My Spot!</button>
-            </form> */}
         </div>
         <div className="min-h-[200px] py-16 bg-oresta-light px-5 sm:px-14 lg:px-28">
             <div className="grid md:grid-cols-2 gap-10 leading-8 text-oresta-primary">

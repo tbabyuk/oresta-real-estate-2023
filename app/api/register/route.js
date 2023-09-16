@@ -17,9 +17,10 @@ export async function POST(request) {
     
     
         const mailOptions = {
-            from: "info@dacapomusic.ca",
+            from: "terry@strictlywebdev.com",
             to: ["tbabyuk@gmail.com", "orestakisil@kw.com"],
-            subject: "New 'SM' Webinar Registration",
+            // to: "tbabyuk@gmail.com",
+            subject: "New Webinar Registration",
             html: `
             <strong>Name:</strong><br />
             <small>${name}</small>
