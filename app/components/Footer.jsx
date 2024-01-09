@@ -11,14 +11,14 @@ const Footer = () => {
         <div className="mb-20 md:mb-0">
             <h3 className="text-xl text-center mb-10">SOCIAL:</h3>
             <div className="flex justify-center gap-5">
-                <a href="https://www.facebook.com/orestakisilrealestate/" target="_blank">
+                <a href="https://www.facebook.com/orestakisilandco/" target="_blank">
                     <img src="/images/facebook.png" alt="facebook logo" className="w-12" />
                 </a>
-                <a href="https://www.instagram.com/oresta_kisil/" target="_blank">
+                <a href="https://www.instagram.com/orestakisilandco/" target="_blank">
                     <img src="/images/instagram.png" alt="instagram logo" className="w-12" />
                 </a>
-                <a href="https://twitter.com/oresta_kisil" target="_blank">
-                    <img src="/images/twitter.png" alt="twitter logo" className="w-12" />
+                <a href="" target="_blank">
+                    <img src="/images/youtube.png" alt="twitter logo" className="w-12" />
                 </a>
                 <a href="https://www.linkedin.com/in/orestababyuk/?trk=hp-identity-name" target="_blank">
                     <img src="/images/linkedin.png" alt="linkedin logo" className="w-12" />

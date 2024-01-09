@@ -10,14 +10,14 @@ const Header = () => {
         {/* TOP HEADER */}
         <div className="header-top min-h-12 py-2 px-3 md:px-5 bg-oresta-primary text-oresta-gray flex justify-between">
             <div className="flex gap-2 md:gap-4">
-                <a href="https://www.facebook.com/orestakisilrealestate/" target="_blank">
+                <a href="https://www.facebook.com/orestakisilandco/" target="_blank">
                     <img src="/images/facebook.png" alt="facebook logo" className="w-7" />
                 </a>
-                <a href="https://www.instagram.com/oresta_kisil/" target="_blank">
+                <a href="https://www.instagram.com/orestakisilandco/" target="_blank">
                     <img src="/images/instagram.png" alt="instagram logo" className="w-7" />
                 </a>
-                <a href="https://twitter.com/oresta_kisil" target="_blank">
-                    <img src="/images/twitter.png"  alt="twitter logo" className="w-7" />
+                <a href="" target="_blank">
+                    <img src="/images/youtube.png"  alt="youtube logo" className="w-7" />
                 </a>
                 <a href="https://www.linkedin.com/in/orestababyuk/?trk=hp-identity-name" target="_blank">
                     <img src="/images/linkedin.png"  alt="linkedin logo" className="w-7" />

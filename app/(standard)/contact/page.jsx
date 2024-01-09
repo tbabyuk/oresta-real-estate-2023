@@ -2,8 +2,8 @@
 import { ContactForm } from "@/app/components/ContactForm"
 
 export const metadata = {
-    title: 'Kisil RES | Contact',
-    description: 'Get in touch today for a free consulation!',
+    title: "OK+Co. | Contact",
+    description: "Get in touch today for a free consulation!",
 }
 
 const Contact = () => {
