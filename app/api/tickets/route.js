@@ -20,8 +20,8 @@ export async function POST(request) {
     
         const mailOptions = {
             from: "terry@strictlywebdev.com",
-            // to: ["tbabyuk@gmail.com", "orestakisil@kw.com"],
-            to: ["tbabyuk@gmail.com"],
+            to: ["tbabyuk@gmail.com", "orestakisil@kw.com"],
+            // to: ["tbabyuk@gmail.com"],
             subject: "New Home Show Ticket Request",
             html: `
             <strong>First Name:</strong><br />
