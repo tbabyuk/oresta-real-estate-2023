@@ -7,7 +7,8 @@ import {useRef, useState} from "react"
 
 export const TicketsForm = () => {
   
-  const nameRef = useRef()
+  const firstNameRef = useRef()
+  const lastNameRef = useRef()
   const emailRef = useRef()
   const ticketsRef = useRef()
   const [sending, setSending] = useState(false)
@@ -27,7 +28,8 @@ export const TicketsForm = () => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name: nameRef.current.value,
+                firstName: firstNameRef.current.value,
+                lastName: lastNameRef.current.value,
                 email: emailRef.current.value,
                 tickets: ticketsRef.current.value
             })
@@ -61,8 +63,12 @@ export const TicketsForm = () => {
             {!successMessage && !failMessage && 
                 (<form className="w-[330px] mx-auto flex flex-col" onSubmit={handleSubmit}>
                     <label className="mb-10 flex flex-col">
-                        <span className="text-gray-50 font-light self-start mb-2">Name:</span>
-                        <input type="text" className="h-9 rounded ps-2" required ref={nameRef} />
+                        <span className="text-gray-50 font-light self-start mb-2">First Name:</span>
+                        <input type="text" className="h-9 rounded ps-2" required ref={firstNameRef} />
+                    </label>
+                    <label className="mb-10 flex flex-col">
+                        <span className="text-gray-50 font-light self-start mb-2">Last Name:</span>
+                        <input type="text" className="h-9 rounded ps-2" required ref={lastNameRef} />
                     </label>
                     <label className="mb-10 flex flex-col">
                         <span className="text-gray-50 font-light self-start mb-2">Email:</span>
@@ -71,8 +77,8 @@ export const TicketsForm = () => {
                     <label className="mb-14 flex flex-col">
                         <span className="text-gray-50 font-light self-start mb-2">Preferred Number of Tickets:</span>
                         <select className="h-9 rounded ps-3" ref={ticketsRef}>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
                         </select>
                     </label>
                     <button className="bg-orange-400 text-gray-100 w-full h-12 mx-auto px-14 rounded hover:bg-orange-500" disabled={sending}>{sending ? "processing, please wait..." : "Get My Tickets!"}</button>

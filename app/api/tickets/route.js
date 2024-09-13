@@ -6,27 +6,29 @@ import nodemailer from "nodemailer"
 
 export async function POST(request) {
 
-    const {name, email, tickets} = await request.json()
+    const {firstName, lastName, email, tickets} = await request.json()
 
-
-    console.log("logging details from route.js", name, email, tickets)
 
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
             user: "terry@strictlywebdev.com",
-            pass: "nvebpdswqgwuzozq"
+            pass: process.env.STRICTLY_EMAIL_APP_PASS
         }
         })
     
     
         const mailOptions = {
             from: "terry@strictlywebdev.com",
-            to: ["tbabyuk@gmail.com", "orestakisil@kw.com"],
+            // to: ["tbabyuk@gmail.com", "orestakisil@kw.com"],
+            to: ["tbabyuk@gmail.com"],
             subject: "New Home Show Ticket Request",
             html: `
-            <strong>Name:</strong><br />
-            <small>${name}</small>
+            <strong>First Name:</strong><br />
+            <small>${firstName}</small>
+            <hr>
+            <strong>Last Name:</strong><br />
+            <small>${lastName}</small>
             <hr>
             <strong>Email:</strong><br />
             <small>${email}</small>
