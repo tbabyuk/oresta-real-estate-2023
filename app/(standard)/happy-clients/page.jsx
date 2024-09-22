@@ -23,7 +23,7 @@ const HappyClients = async () => {
   const reviews = await fetchReviews();
 
     return (
-      <main className="px-5 md:px-20 xl:px-40 py-20 md:py-28 text-gray-600">
+      <main className="px-5 md:px-20 xl:px-40 py-20 md:py-22 text-gray-600">
         <h1 className="text-center text-4xl mb-20">Happy Clients</h1>
         <div className="flex flex-wrap gap-4">
             {reviews && 
@@ -31,7 +31,6 @@ const HappyClients = async () => {
             )}
         </div>
       </main>
-        
     )
   }
   

@@ -8,7 +8,7 @@ export const metadata = {
 const Home = () => {
 
   return (
-    <main className="px-5 md:px-20 py-20 md:py-28 text-gray-600">
+    <main className="px-5 md:px-20 py-20 md:py-22 text-gray-600">
       <h1 className="text-center text-4xl mb-20">Buying and Selling homes in Toronto, Mississauga, and the GTA!</h1>
         <div className="leading-8">
             <div className="shrink-0 flex justify-center md:me-6 mb-10 md:mb-0 overflow-hidden md:float-left">

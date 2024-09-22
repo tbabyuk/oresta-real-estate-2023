@@ -1,12 +1,13 @@
 import Link from "next/link"
 import {FiPhoneCall} from "react-icons/fi"
 import {TfiEmail} from "react-icons/tfi"
+import { Navbar } from "./Navbar"
 
 
 
 const Header = () => {
   return (
-    <header className="min-h-[330px] flex flex-col">
+    <header className="min-h-[330px] flex flex-col relative">
         {/* TOP HEADER */}
         <div className="header-top min-h-12 py-2 px-3 md:px-5 bg-oresta-primary text-oresta-gray flex justify-between">
             <div className="flex gap-2 md:gap-4">
@@ -32,6 +33,7 @@ const Header = () => {
                 </a>
             </div>
         </div>
+        <Navbar />
         <div className="header-middle flex justify-between px-0 md:px-5 h-full bg-[url('/images/oresta_header_bg.jpg')] bg-center bg-cover overflow-hidden">
             <img src="/images/oresta_banner_image.png"  alt="photo of Oresta Kisil" style={{width: "200px"}} />
             <div className="hidden lg:flex lg:flex-col font-light w-[500px] text-oresta-primary text-center self-center">
@@ -40,13 +42,6 @@ const Header = () => {
             </div>
             <Link href="/"><img src="/images/logo_white_transparent.png" alt="Oresta Kisil Real Estate logo" className="flex-shrink-0 bg-black bg-opacity-40 rounded-b-2xl h-[90px] sm:h-[150px]" /></Link>
         </div>
-        <nav className="h-12 bg-oresta-light">
-            <ul className="flex justify-center items-center gap-10 h-full bg-oresta-light text-gray-600">
-                <Link href="/" className="hover:text-oresta-primary"><li>HOME</li></Link>
-                <Link href="/happy-clients" className="hover:text-oresta-primary"><li>HAPPY CLIENTS</li></Link>
-                <Link href="/contact" className="hover:text-oresta-primary"><li>CONTACT</li></Link>
-            </ul>
-        </nav>
     </header>
   )
 }
