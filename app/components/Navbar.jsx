@@ -19,20 +19,20 @@ export const Navbar = () => {
 
 
   return (
-        <nav className="px-5 h-[40px] flex justify-center items-center bg-oresta-light relative">
+        <nav className="px-5 h-12 flex justify-center items-center bg-oresta-light relative">
             {dropdownIsOpen ? (
                 <IoCloseOutline 
-                    className="absolute left-2 top-1 cursor-pointer md:hidden text-oresta-primary" size="2.2rem"
+                    className="absolute left-2 top-2 cursor-pointer md:hidden text-oresta-primary" size="2.2rem"
                     onClick={() => setDropdownIsOpen(!dropdownIsOpen)}
                 />
             ) : (
                 <RxHamburgerMenu 
-                className="absolute left-2 top-1 cursor-pointer md:hidden text-oresta-primary" size="2rem"
+                className="absolute left-2 top-2 cursor-pointer md:hidden text-oresta-primary" size="2rem"
                 onClick={() => setDropdownIsOpen(!dropdownIsOpen)}
                 />
             ) }
 
-            <ul className={`h-full md:flex md:flex-row md:justify-center md:static ${dropdownIsOpen ? "flex-col w-full absolute -bottom-10" : "hidden"}`}>
+            <ul className={`h-full md:flex md:flex-row md:justify-center md:static ${dropdownIsOpen ? "flex-col w-full absolute -bottom-12" : "hidden"}`}>
                 <li><Link href="/" className="w-full h-full flex justify-center items-center px-5 py-3 bg-oresta-light/80 hover:text-gray-50" onClick={() => setDropdownIsOpen(false)}>HOME</Link></li>
                 <li><Link href="/happy-clients" className="w-full h-full flex justify-center items-center px-5 py-3 bg-oresta-light/80 hover:text-gray-50" onClick={() => setDropdownIsOpen(false)}>HAPPY CLIENTS</Link></li>
                 <li><Link href="/contact" className="w-full h-full flex justify-center items-center px-5 py-3 bg-oresta-light/80 hover:text-gray-50" onClick={() => setDropdownIsOpen(false)}>CONTACT</Link></li>

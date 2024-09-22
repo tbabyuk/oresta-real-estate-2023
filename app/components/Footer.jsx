@@ -27,10 +27,12 @@ const Footer = () => {
         </div>
         <div className="mb-20 md:mb-0">
             <h3 className="text-xl text-center mb-10">LEARN MORE:</h3>
-            <ul className="flex flex-col items-center gap-6">
+            <ul className="flex flex-col items-center gap-4">
                 <Link href="/" className="hover:text-oresta-light"><li>Home</li></Link>
                 <Link href="/happy-clients" className="hover:text-oresta-light"><li>Happy Clients</li></Link>
                 <Link href="/contact" className="hover:text-oresta-light"><li>Contact</li></Link>
+                <Link href="/resources/videos" className="hover:text-oresta-light"><li>Videos</li></Link>
+                <Link href="/resources/preferred-vendors" className="hover:text-oresta-light"><li>Preferred Vendors</li></Link>
             </ul>
         </div>
         <div>
