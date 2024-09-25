@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className="min-h-[330px] flex flex-col relative">
         {/* TOP HEADER */}
-        <div className="header-top min-h-12 py-2 px-3 md:px-5 bg-oresta-primary text-oresta-gray flex justify-between">
+        <div className="min-h-12 py-2 px-3 md:px-5 bg-oresta-primary text-oresta-gray flex justify-between">
             <div className="flex gap-2 md:gap-4">
                 <a href="https://www.facebook.com/orestakisilandco/" target="_blank">
                     <img src="/images/facebook.png" alt="facebook logo" className="w-7" />
@@ -34,7 +34,7 @@ const Header = () => {
             </div>
         </div>
         <Navbar />
-        <div className="header-middle flex justify-between px-0 md:px-5 h-full bg-[url('/images/oresta_header_bg.jpg')] bg-center bg-cover overflow-hidden">
+        <div className="flex justify-between px-0 md:px-5 h-full bg-[url('/images/oresta_header_bg.jpg')] bg-center bg-cover overflow-hidden">
             <img src="/images/oresta_banner_image.png"  alt="photo of Oresta Kisil" style={{width: "200px"}} />
             <div className="hidden lg:flex lg:flex-col font-light w-[500px] text-oresta-primary text-center self-center">
                 <a href="tel:+4163195784" className="text-6xl mb-6">(416) 319-5748</a>
