@@ -106,7 +106,7 @@ export const SpooktacularTicketsForm = () => {
                             <option value="4">4</option>                        
                         </select>
                     </label>
-                    <button className="bg-orange-400 text-gray-100 w-full h-12 mx-auto px-14 rounded hover:bg-orange-500" disabled={sending}>{sending ? "processing, please wait..." : "Get My Tickets!"}</button>
+                    <button className="bg-orange-500 text-gray-100 w-full h-12 mx-auto px-14 rounded hover:bg-orange-600" disabled={sending}>{sending ? "processing, please wait..." : "Get My Tickets!"}</button>
                 </form>)
             }
         </>

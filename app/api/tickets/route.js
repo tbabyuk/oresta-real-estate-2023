@@ -20,8 +20,7 @@ export async function POST(request) {
     
         const mailOptions = {
             from: "terry@strictlywebdev.com",
-            to: ["tbabyuk@gmail.com"],
-            // to: ["orestakisil@kw.com"],
+            to: ["terry@strictlywebdev.com", "orestakisil@kw.com"],
             subject: "New Spooktacular Registration",
             html: `
             <strong>First Name:</strong><br />
