@@ -6,7 +6,7 @@ import nodemailer from "nodemailer"
 
 export async function POST(request) {
 
-    const {firstName, lastName, email, tickets} = await request.json()
+    const {firstName, lastName, email, adultTickets, childTickets, numPets} = await request.json()
 
 
     const transporter = nodemailer.createTransport({
@@ -20,9 +20,9 @@ export async function POST(request) {
     
         const mailOptions = {
             from: "terry@strictlywebdev.com",
-            to: ["tbabyuk@gmail.com", "orestakisil@kw.com"],
-            // to: ["tbabyuk@gmail.com"],
-            subject: "New Home Show Ticket Request",
+            to: ["tbabyuk@gmail.com"],
+            // to: ["orestakisil@kw.com"],
+            subject: "New Spooktacular Registration",
             html: `
             <strong>First Name:</strong><br />
             <small>${firstName}</small>
@@ -33,8 +33,14 @@ export async function POST(request) {
             <strong>Email:</strong><br />
             <small>${email}</small>
             <hr>
-            <strong>Num of Tickets:</strong><br />
-            <small>${tickets}</small>
+            <strong>Num of Adult Tickets:</strong><br />
+            <small>${adultTickets}</small>
+            <hr>
+            <strong>Num of Child Tickets:</strong><br />
+            <small>${childTickets}</small>
+            <hr>
+            <strong>Num of Pets:</strong><br />
+            <small>${numPets}</small>
             `
         }
 

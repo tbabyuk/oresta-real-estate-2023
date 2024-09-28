@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 
+
 button:disabled {
     @apply bg-gray-400 hover:bg-gray-400
 }
+
+
+.griffy {
+    font-family: var(--font-griffy)
+}
+  

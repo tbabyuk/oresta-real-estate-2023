@@ -1,4 +1,4 @@
-import { TicketsForm } from "../components/TicketsForm";
+import { TicketsForm } from "@/app/components/TicketsForm";
 import Link from "next/link";
 
 
