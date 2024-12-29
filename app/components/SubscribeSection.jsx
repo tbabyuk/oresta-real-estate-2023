@@ -27,12 +27,12 @@ export const SubscribeSection = () => {
                 })
             })
 
-            const {message} = await res.json()
+            const data = await res.json()
 
-            console.log("Logging message from front end:", message)
+            console.log("Logging message from front end:", data.message)
 
             if(res.ok) {
-                if(message === "Email is already subscribed") {
+                if(data.message === "Email is already subscribed") {
                     setEmailExistsMessage(true)
                 } else {
                     setSuccessMessage(true)
@@ -43,11 +43,11 @@ export const SubscribeSection = () => {
 
             } catch (error) {
                 setFailMessage(true)
-                console.log("An error occurred:", error.message)
+                console.log("An error occurred:", error.message, data.error)
             } finally {
                 setIsPending(false)
             }
-    }
+        }
 
 
     return(

@@ -9,7 +9,7 @@ export async function POST(request) {
 
     const {email} = await request.json()
 
-    console.log("Logging email from API +++++++++++++:", email)
+    console.log("Logging email to be subscribed from API:", email)
 
 
     client.setConfig({
