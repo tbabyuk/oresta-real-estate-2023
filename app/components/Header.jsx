@@ -28,9 +28,7 @@ const Header = () => {
                 <a href="tel:+4163195784" className="flex flex-row items-center hover:text-oresta-light">
                     <FiPhoneCall className="hidden md:block me-2" />(416) 319-5748
                 </a>
-                <a href="mailto:orestakisil@kw.com" className="flex flex-row items-center hover:text-oresta-light">
-                    <TfiEmail className="hidden md:block me-2" />Email Me
-                </a>
+                <Link href="/contact" className="flex flex-row items-center hover:text-oresta-light cursor-pointer"><TfiEmail className="hidden md:block me-2" />Email Me</Link>
             </div>
         </div>
         <Navbar />
@@ -38,7 +36,7 @@ const Header = () => {
             <img src="/images/oresta_banner_image.png"  alt="photo of Oresta Kisil" style={{width: "200px"}} />
             <div className="hidden lg:flex lg:flex-col font-light w-[500px] text-oresta-primary text-center self-center">
                 <a href="tel:+4163195784" className="text-6xl mb-6">(416) 319-5748</a>
-                <a href="mailto:orestakisil@kw.com" className="text-4xl">orestakisil@kw.com</a>
+                {/* <a href="mailto:orestakisil@kw.com" className="text-4xl">orestakisil@kw.com</a> */}
             </div>
             <Link href="/"><img src="/images/logo_white_transparent.png" alt="Oresta Kisil Real Estate logo" className="flex-shrink-0 bg-black bg-opacity-40 rounded-b-2xl h-[90px] sm:h-[150px]" /></Link>
         </div>

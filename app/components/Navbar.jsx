@@ -32,7 +32,7 @@ export const Navbar = () => {
                 />
             ) }
 
-            <ul className={`h-full md:flex md:flex-row md:justify-center md:static ${dropdownIsOpen ? "flex-col w-full absolute -bottom-11" : "hidden"}`}>
+            <ul className={`h-full md:flex md:flex-row md:justify-center md:static ${dropdownIsOpen ? "flex-col w-full absolute -bottom-11" : "hidden"} text-gray-800`}>
                 <li><Link href="/" className="w-full h-full flex justify-center items-center px-5 py-3 bg-oresta-light/80 hover:text-gray-50" onClick={() => setDropdownIsOpen(false)}>HOME</Link></li>
                 <li><Link href="/happy-clients" className="w-full h-full flex justify-center items-center px-5 py-3 bg-oresta-light/80 hover:text-gray-50" onClick={() => setDropdownIsOpen(false)}>HAPPY CLIENTS</Link></li>
                 <li><Link href="/contact" className="w-full h-full flex justify-center items-center px-5 py-3 bg-oresta-light/80 hover:text-gray-50" onClick={() => setDropdownIsOpen(false)}>CONTACT</Link></li>

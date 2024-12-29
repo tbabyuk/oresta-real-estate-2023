@@ -14,16 +14,16 @@ const griffy = Griffy({
   variable: "--font-griffy"
 })
 
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: "--font-inter"
+})
 
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${griffy.variable}`}>{children}</body>
-      {/* <body className={`${roboto.variable} ${ovo.variable}`}> */}
-
+      <body className={`${inter.variable} ${griffy.variable}`}>{children}</body>
     </html>
   )
 }
