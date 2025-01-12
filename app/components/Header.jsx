@@ -42,6 +42,7 @@ const Header = () => {
                     alt="photo of Oresta Kisil"
                     width="210"
                     height="300"
+                    className="align-bottom"
                 />
             </div>
             <div className="hidden lg:flex lg:flex-col px-8 xl:ps-14 font-light text-oresta-primary/70 self-center">
