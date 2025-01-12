@@ -7,9 +7,9 @@ import { Navbar } from "./Navbar"
 
 const Header = () => {
   return (
-    <header className="min-h-[360px] flex flex-col relative">
+    <header className="flex flex-col relative">
         {/* TOP HEADER */}
-        <div className="min-h-12 py-2 px-3 md:px-5 bg-oresta-primary text-oresta-gray flex justify-between">
+        <div className="h-[44px] py-2 px-3 md:px-5 bg-oresta-primary text-oresta-gray flex justify-between items-center">
             <div className="flex gap-2 md:gap-4">
                 <a href="https://www.facebook.com/orestakisilandco/" target="_blank">
                     <img src="/images/facebook.png" alt="facebook logo" className="w-7" />
@@ -33,18 +33,20 @@ const Header = () => {
         </div>
         <Navbar />
         {/* HERO */}
-        <div className="flex justify-between px-0 md:px-5 h-full bg-[url('/images/oresta_hero_bg_light_2.png')] bg-center bg-cover overflow-hidden">
-            <img src="/images/oresta_banner_image.png"  alt="photo of Oresta Kisil" style={{width: "190px"}} />
-            <div className="hidden lg:flex lg:flex-col lg:mx-3 lg:px-3 lg:py-6 lg:rounded font-light text-oresta-primary/70 self-center">
+        <div className="h-[320px] flex justify-evenly px-0 md:px-5 bg-[url('/images/oresta_hero_bg_light.png')] bg-center bg-cover overflow-hidden">
+            <div className="flex flex-shrink-0 justify-center">
+                <img src="/images/oresta_banner_image.png"  alt="photo of Oresta Kisil" />
+            </div>
+            <div className="hidden lg:flex lg:flex-col px-8 xl:ps-14 font-light text-oresta-primary/70 self-center">
                 <h1 className="text-3xl xl:text-4xl font-semibold pb-4 mb-1">Oresta Kisil | Your west-end Toronto and GTA Realtor</h1>
                 <ul className="list-inside list-disc space-y-3 font-normal text-xl xl:text-2xl">
                     <li>Bringing ease and confidence to your real estate journey</li>
                     <li>Supporting sellers, buyers, leasees + investors since 2016</li>
                 </ul>
             </div>
-            <div className="flex flex-col items-end justify-evenly sm:min-w-[300px]">
+            <div className="flex lg:flex-shrink-0 flex-col items-center justify-evenly">
                 <Link href="/" className="block h-fit"><img src="/images/logo_white_transparent.png" alt="Oresta Kisil Real Estate logo" className="flex-shrink-0 bg-black/30 rounded-2xl h-[90px] sm:h-[150px]" /></Link>
-                <h1 className="sm:hidden px-4 text-center text-2xl">Find your Dream Home in Toronto & the GTA</h1>
+                <h1 className="lg:hidden px-4 text-center text-2xl">Find your Dream Home in Toronto & the GTA</h1>
             </div>
         </div>
     </header>
