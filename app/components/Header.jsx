@@ -35,11 +35,12 @@ const Header = () => {
         <Navbar />
         {/* HERO */}
         <div className="h-[320px] flex justify-evenly px-0 md:px-5 bg-[url('/images/oresta_hero_bg_light.png')] bg-center bg-cover overflow-hidden">
-            <div className="w-[210px] flex flex-shrink-0 justify-center">
+            <div className="w-[50%] lg:w-auto flex flex-shrink-0 justify-center">
+                {/* <img src="/images/oresta_banner_image.png" className="w-[210px]" /> */}
                 <Image 
                     src="/images/oresta_banner_image.png" 
                     alt="photo of Oresta Kisil"
-                    width="210" 
+                    width="210"
                     height="300"
                 />
             </div>
@@ -50,7 +51,7 @@ const Header = () => {
                     <li>Supporting sellers, buyers, leasees + investors since 2016</li>
                 </ul>
             </div>
-            <div className="flex lg:flex-shrink-0 flex-col items-center justify-evenly">
+            <div className="w-[50%] lg:w-auto flex lg:flex-shrink-0 flex-col items-center justify-evenly">
                 <Link href="/" className="block h-fit"><img src="/images/logo_white_transparent.png" alt="Oresta Kisil Real Estate logo" className="flex-shrink-0 bg-black/30 rounded-2xl h-[90px] sm:h-[150px]" /></Link>
                 <h1 className="lg:hidden px-4 text-center text-2xl">Find your Dream Home in Toronto & the GTA</h1>
             </div>
