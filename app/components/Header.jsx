@@ -2,6 +2,7 @@ import Link from "next/link"
 import {FiPhoneCall} from "react-icons/fi"
 import {TfiEmail} from "react-icons/tfi"
 import { Navbar } from "./Navbar"
+import Image from "next/image"
 
 
 
@@ -34,8 +35,13 @@ const Header = () => {
         <Navbar />
         {/* HERO */}
         <div className="h-[320px] flex justify-evenly px-0 md:px-5 bg-[url('/images/oresta_hero_bg_light.png')] bg-center bg-cover overflow-hidden">
-            <div className="flex flex-shrink-0 justify-center">
-                <img src="/images/oresta_banner_image.png"  alt="photo of Oresta Kisil" className="w-full" />
+            <div className="w-[210px] flex flex-shrink-0 justify-center">
+                <Image 
+                    src="/images/oresta_banner_image.png" 
+                    alt="photo of Oresta Kisil"
+                    width="210" 
+                    height="300"
+                />
             </div>
             <div className="hidden lg:flex lg:flex-col px-8 xl:ps-14 font-light text-oresta-primary/70 self-center">
                 <h1 className="text-3xl xl:text-4xl font-semibold pb-4 mb-1">Oresta Kisil | Your west-end Toronto and GTA Realtor</h1>
