@@ -34,16 +34,9 @@ const Header = () => {
         </div>
         <Navbar />
         {/* HERO */}
-        <div className="h-[320px] flex justify-evenly px-0 md:px-5 bg-[url('/images/oresta_hero_bg_light.png')] bg-center bg-cover overflow-hidden">
+        <div className="h-[300px] flex justify-evenly px-0 md:px-5 bg-[url('/images/oresta_hero_bg_light.png')] bg-center bg-cover overflow-hidden">
             <div className="w-[50%] lg:w-[260px] flex lg:flex-shrink-0 justify-center">
                 <img src="/images/oresta_banner_image.png" alt="photo of Oresta Kisil" className="w-[210px]" />
-                {/* <Image 
-                    src="/images/oresta_banner_image.png" 
-                    alt="photo of Oresta Kisil"
-                    width="210"
-                    height="300"
-                    className="align-bottom"
-                /> */}
             </div>
             <div className="hidden lg:flex lg:flex-col px-8 font-light text-oresta-primary/70 self-center">
                 <h1 className="text-3xl xl:text-4xl font-semibold pb-4 mb-1">Oresta Kisil | Your west-end Toronto and GTA Realtor</h1>
