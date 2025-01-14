@@ -26,7 +26,7 @@ const Header = () => {
                 </a>
             </div>
             <div className="flex gap-7 text-sm">
-                <a href="tel:+4163195784" className="flex flex-row items-center hover:text-oresta-light">
+                <a href="tel:+14163195784" className="flex flex-row items-center hover:text-oresta-light">
                     <FiPhoneCall className="hidden md:block me-2" />(416) 319-5748
                 </a>
                 <Link href="/contact" className="flex flex-row items-center hover:text-oresta-light cursor-pointer"><TfiEmail className="hidden md:block me-2" />Email Me</Link>
