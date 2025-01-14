@@ -42,7 +42,7 @@ const Header = () => {
                 <h1 className="text-3xl xl:text-4xl font-semibold pb-4 mb-1">Oresta Kisil | Your west-end Toronto and GTA Realtor</h1>
                 <ul className="list-inside list-disc space-y-3 font-normal text-xl xl:text-2xl">
                     <li>Bringing ease and confidence to your real estate journey</li>
-                    <li>Supporting sellers, buyers, leasees + investors since 2016</li>
+                    <li>Supporting sellers, buyers, leasees & investors since 2015</li>
                 </ul>
             </div>
             <div className="w-[50%] lg:w-auto flex lg:flex-shrink-0 flex-col items-center justify-evenly">
