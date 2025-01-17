@@ -1,19 +1,108 @@
+"use client"
+
+import { useState, useRef } from "react"
 
 
 
 const FoundationsOfWealthLandingPage = () => {
 
+    const firstNameRef = useRef()
+    const lastNameRef = useRef()
+    const phoneRef = useRef()
+    const emailRef = useRef()
+    const numTicketsRef = useRef()
+  
+    const [sending, setSending] = useState(false)
+    const [successMessage, setSuccessMessage] = useState(false)
+    const [failMessage, setFailMessage] = useState(false)
+  
+  
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setSending(true)
+
+        try {
+          const res = await fetch("/api/google", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                  event: "FoundationsOfWealth",
+                  firstName: firstNameRef.current.value,
+                  lastName: lastNameRef.current.value,
+                  phone: phoneRef.current.value,
+                  email: emailRef.current.value,
+                  numTickets: numTicketsRef.current.value
+              })
+          })
+  
+          console.log("logging server response from client:", res)
+  
+          if(res.ok) {
+              setSuccessMessage(true)
+          } else {
+              setFailMessage(true)
+          }
+        } catch (error) {
+              setFailMessage(true)
+        } finally {
+              setSending(false)
+        }
+    }
+  
+
 
   return (
-    <div className="flex justify-center bg-oresta-light py-10 overflow-y-auto">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfMHDYb1mULOiUn5QaygDcMc88o-fghsiKgjrx1xT58VIEHrA/viewform?embedded=true" width={640} height={1156}>Loading…</iframe>
-    </div>
-  )
+      <div className="bg-oresta-light min-h-[100vh] py-14">
+          {successMessage && 
+              (<p className="text-center text-xl text-green-700">Thank you - your form has been submitted successfully!<br /> You should be receiving your e-tickets within 24 hours!</p>)
+          }
+
+          {failMessage && 
+              (<p className="text-center text-xl text-red-700">Ooops, something went wrong! Please try again or call Oresta directly at <a href="tel:+14163195748" className="font-bold">(416) 319-5748</a> to ask for tickets!</p>)
+          }
+
+          {!successMessage && !failMessage && 
+              (<form className="w-[400px] max-w-[90%] rounded-md mx-auto flex flex-col bg-white p-8" onSubmit={handleSubmit}>
+                  <h1 className="text-2xl border-b-2 pb-2 mb-2">Foundations of Wealth - Registration Form</h1>
+                  <p className="text-sm mb-8">Learn the foundational tools for saving for your first home and investing in the stock market!</p>
+                  <label className="mb-8 flex flex-col">
+                      <span className="self-start mb-2">First Name:</span>
+                      <input type="text" className="bg-oresta-light/20 h-9 rounded ps-2 shadow" required ref={firstNameRef} />
+                  </label>
+                  <label className="mb-8 flex flex-col">
+                      <span className="self-start mb-2">Last Name:</span>
+                      <input type="text" className="bg-oresta-light/20 h-9 rounded ps-2 shadow" required ref={lastNameRef} />
+                  </label>
+                  <label className="mb-8 flex flex-col">
+                      <span className="self-start mb-2">Phone Number:</span>
+                      <input type="tel" className="bg-oresta-light/20 h-9 rounded ps-2 shadow" required ref={phoneRef} />
+                  </label>
+                  <label className="mb-8 flex flex-col">
+                      <span className="self-start mb-2">Email:</span>
+                      <input type="email" className="bg-oresta-light/20 h-9 rounded ps-2 shadow" required ref={emailRef} />
+                  </label>
+                  <label className="mb-12 flex flex-col">
+                      <span className="self-start mb-2">Number of Tickets:</span>
+                      <select className="bg-oresta-light/20 h-9 rounded ps-3 shadow" ref={numTicketsRef}>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                      </select>
+                  </label>
+                  <button className="bg-orange-500 text-gray-100 w-full h-12 mx-auto px-14 rounded hover:bg-orange-600" disabled={sending}>{sending ? "processing, please wait..." : "Get My Tickets!"}</button>
+              </form>)
+          }
+      </div>
+    )
 }
 
-{/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfMHDYb1mULOiUn5QaygDcMc88o-fghsiKgjrx1xT58VIEHrA/viewform?embedded=true" width="640" height="1156" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> */}
+export default FoundationsOfWealthLandingPage;
 
-{/* <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11566.196608402468!2d-79.5833131!3d43.5534391!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b47e2eef44ba3%3A0x13cbbe5d0f33d02f!2sOresta%20Kisil%20Real%20Estate%20Services!5e0!3m2!1sen!2sca!4v1684509067581!5m2!1sen!2sca" width="100%" height={450} style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/> */}
 
-export default FoundationsOfWealthLandingPage
+// Deployment ID: AKfycbwiV18XpukfzOyupf3K29uXhnRfwz9XgNaknan-Aus8rIf0U5wDSSxhFyEzvj8L0Qif
 
+// https://script.google.com/macros/s/AKfycbwiV18XpukfzOyupf3K29uXhnRfwz9XgNaknan-Aus8rIf0U5wDSSxhFyEzvj8L0Qif/exec
