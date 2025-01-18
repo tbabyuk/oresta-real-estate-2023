@@ -27,7 +27,7 @@ button:disabled {
 
 .oresta-form-input {
     /* @apply h-9 rounded ps-2 border-2 focus:outline-oresta-light; */
-    @apply h-9 rounded ps-2 outline-none border-2 focus:border-oresta-light;
+    @apply h-10 p-2 rounded outline-none border-2 focus:border-oresta-light;
 }
 
 .oresta-action-orange {

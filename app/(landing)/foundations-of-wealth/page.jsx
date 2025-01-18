@@ -97,7 +97,7 @@ const FoundationsOfWealthLandingPage = () => {
                           <option value="5">5</option>
                       </select>
                   </label>
-                  <button className="h-10 w-full oresta-action-orange" disabled={sending}>{sending ? "processing, please wait..." : "Get My Tickets!"}</button>
+                  <button className="h-11 w-full oresta-action-orange" disabled={sending}>{sending ? "processing, please wait..." : "Get My Tickets!"}</button>
               </form>)
           }
       </div>

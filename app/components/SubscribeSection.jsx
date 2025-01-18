@@ -67,7 +67,7 @@ export const SubscribeSection = () => {
                         <form className="flex flex-col sm:flex-row justify-center items-center gap-y-4 gap-x-4" onSubmit={handleSubscribe}>
                         <input 
                             type="email" 
-                            className="h-10 w-full border-2 border-gray-300 rounded ps-2" 
+                            className="h-10 w-full border-gray-300 oresta-form-input " 
                             onChange={(e) => setContactEmail(e.target.value) }
                             value={contactEmail}
                             placeholder="enter your email address" 
