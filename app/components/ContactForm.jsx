@@ -45,22 +45,22 @@ export const ContactForm = () => {
       (
         <form className="flex flex-col justify-between h-full w-full lg:w-[80%]" onSubmit={handleSubmit}>
             <label className="flex flex-col mb-6">
-                <span>Your Name:</span>
-                <input type="text" className="border-2 border-gray-300 rounded h-9 ps-2" ref={nameRef} />
+                <span className="mb-1">Your Name:</span>
+                <input type="text" className="oresta-form-input" ref={nameRef} />
             </label>
             <label className="flex flex-col mb-6">
-                <span>Your Phone:</span>
-                <input type="tel" className="border-2 border-gray-300 rounded h-9 ps-2" ref={phoneRef} />
+                <span className="mb-1">Your Phone:</span>
+                <input type="tel" className="oresta-form-input" ref={phoneRef} />
             </label>
             <label className="flex flex-col mb-6">
-                <span>Your Email:</span>
-                <input type="email" className="border-2 border-gray-300 rounded h-9 ps-2" ref={emailRef} />
+                <span className="mb-1">Your Email:</span>
+                <input type="email" className="oresta-form-input" ref={emailRef} />
             </label>
             <label className="flex flex-col mb-6">
-                <span>Your Message:</span>
-                <textarea className="border-2 border-gray-300 rounded h-20 ps-2" ref={messageRef} />
+                <span className="mb-1">Your Message:</span>
+                <textarea className="rounded ps-2 border-2 focus:outline-oresta-light h-20" ref={messageRef} />
             </label>
-            <button className="h-9 bg-oresta-light rounded text-black hover:bg-[#84b3a4]" disabled={sending}>{sending ? "sending, please wait..." : "Send"}</button>
+            <button className="h-10 w-full oresta-action-orange" disabled={sending}>{sending ? "sending, please wait..." : "Send"}</button>
         </form>
       )}
     </>

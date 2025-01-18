@@ -21,3 +21,14 @@ button:disabled {
 .griffy {
     font-family: var(--font-griffy)
 }
+
+
+/* Oresta Form Styling */
+
+.oresta-form-input {
+    @apply h-9 rounded ps-2 border-2 focus:outline-oresta-light;
+}
+
+.oresta-action-orange {
+    @apply mx-auto bg-orange-500/70 text-gray-100 rounded hover:bg-orange-600/70 focus:outline-none focus:ring-2 focus:ring-oresta-light;
+}
