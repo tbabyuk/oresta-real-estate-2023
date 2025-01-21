@@ -60,11 +60,11 @@ const FoundationsOfWealthLandingPage = () => {
   return (
       <div className="bg-oresta-light min-h-[100vh] py-14">
           {successMessage && 
-              (<p className="mt-6 bg-white w-fit mx-auto p-8 rounded text-center text-xl text-green-600">Thank you - you have been registered!</p>)
+              (<p className="mt-6 bg-white w-fit mx-auto p-8 rounded text-center text-xl text-green-600">Thank you - you have been successfully registered! Keep an eye on your email for more updates.</p>)
           }
 
           {failMessage && 
-              (<p className="mt-6 bg-white w-fit mx-auto p-8 rounded text-center text-xl text-red-600">Ooops, something went wrong! Please try again or call Oresta directly at <a href="tel:+14163195748" className="font-bold">(416) 319-5748</a> to ask for tickets!</p>)
+              (<p className="mt-6 bg-white w-fit mx-auto p-8 rounded text-center text-xl text-red-600">Ooops, something went wrong! Please try again or call Oresta directly at <a href="tel:+14163195748" className="font-bold">(416) 319-5748</a> to get registered!</p>)
           }
 
           {!successMessage && !failMessage && 
@@ -97,7 +97,7 @@ const FoundationsOfWealthLandingPage = () => {
                           <option value="5">5</option>
                       </select>
                   </label>
-                  <button className="h-11 w-full oresta-action-orange" disabled={sending}>{sending ? "processing, please wait..." : "Get My Tickets!"}</button>
+                  <button className="h-11 w-full oresta-action-orange" disabled={sending}>{sending ? "processing, please wait..." : "Register Now"}</button>
               </form>)
           }
       </div>
