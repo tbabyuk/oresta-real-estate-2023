@@ -17,7 +17,7 @@ export async function POST(request) {
     service: "gmail",
     auth: {
         user: "terry@strictlywebdev.com",
-        pass: "aoykfdqgguutgrma"
+        pass: process.env.STRICTLY_EMAIL_APP_PASS
     }
     })
 
@@ -69,6 +69,6 @@ export async function POST(request) {
         return NextResponse.json({message: "email sent and entry added to Google Sheet successfully"})
     } catch (error) {
         console.log("An error occurred:", error.message)
-        return NextResponse.json({message: "either email failed to send or no entry made to google sheet", details: error})
+        return NextResponse.json({message: "either email failed to send or no entry made to google sheet"},{status: 500})
     }
 }

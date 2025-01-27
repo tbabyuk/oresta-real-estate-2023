@@ -11,7 +11,7 @@ export async function POST(request) {
         service: "gmail",
         auth: {
             user: "terry@strictlywebdev.com",
-            pass: "aoykfdqgguutgrma"
+            pass: process.env.STRICTLY_EMAIL_APP_PASS
         }
         })
     
