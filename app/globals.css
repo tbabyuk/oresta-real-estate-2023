@@ -26,10 +26,17 @@ button:disabled {
 /* Oresta Form Styling */
 
 .oresta-form-input {
-    /* @apply h-9 rounded ps-2 border-2 focus:outline-oresta-light; */
-    @apply h-10 p-2 rounded outline-none border-2 focus:border-oresta-light;
+    @apply h-10 p-2 rounded outline-none border-2 focus:border-oresta-moss;
 }
 
 .oresta-action-orange {
-    @apply mx-auto bg-orange-500/70 text-gray-100 rounded hover:bg-orange-600/70 focus:outline-none focus:ring-2 focus:ring-oresta-light;
+    @apply mx-auto bg-oresta-orange text-gray-100 rounded hover:bg-oresta-orange-hover focus:outline-none focus:ring-2 focus:ring-oresta-moss;
+}
+
+.oresta-action-light {
+    @apply mx-auto bg-oresta-blue-gray hover:bg-oresta-blue-gray-hover text-gray-100 rounded focus:outline-none focus:ring-2 focus:ring-oresta-moss;
+}
+
+.gsdf {
+    color: #f48a3e
 }

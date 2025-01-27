@@ -58,7 +58,7 @@ const FoundationsOfWealthLandingPage = () => {
   
 
   return (
-      <div className="bg-oresta-light min-h-[100vh] py-14">
+      <div className="bg-oresta-moss min-h-[100vh] py-14">
           {successMessage && 
               (<p className="mt-6 bg-white w-fit mx-auto p-8 rounded text-center text-xl text-green-600">Thank you - you have been successfully registered! Keep an eye on your email for more updates.</p>)
           }

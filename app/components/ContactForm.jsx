@@ -58,7 +58,7 @@ export const ContactForm = () => {
             </label>
             <label className="flex flex-col mb-6">
                 <span className="mb-1">Your Message:</span>
-                <textarea className="p-2 rounded outline-none border-2 focus:border-oresta-light h-20" ref={messageRef} />
+                <textarea className="p-2 rounded outline-none border-2 focus:border-oresta-moss h-20" ref={messageRef} />
             </label>
             <button className="h-11 w-full oresta-action-orange" disabled={sending}>{sending ? "sending, please wait..." : "Send"}</button>
         </form>

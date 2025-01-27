@@ -13,9 +13,13 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        "oresta-primary": "#2F4857",
-        "oresta-light": "#A4C7BC",
-        "oresta-gray": "#E6E6E6"
+        "oresta-blue": "#2F4857",
+        "oresta-moss": "#A4C7BC",
+        "oresta-gray": "#E6E6E6",
+        "oresta-blue-gray": "#B6BEC4",
+        "oresta-blue-gray-hover": "#AAB4BB",
+        "oresta-orange": "#F59756",
+        "oresta-orange-hover": "#F48A3E"
       }
     },
   },

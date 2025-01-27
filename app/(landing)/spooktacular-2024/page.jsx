@@ -6,7 +6,7 @@ import { SpooktacularTicketsForm } from "@/app/components/SpooktacularTicketsFor
 const SpooktacularLandingPage = () => {
 
   return (
-    <div className="w-full min-h-[100vh] bg-oresta-primary">
+    <div className="w-full min-h-[100vh] bg-oresta-blue">
         <header className="min-h-[330px] p-5 bg-[url('/images/landing-pages/spooktacular_header_bg.jpg')] md:bg-center bg-cover relative border-b-2 border-white flex flex-col items-center justify-evenly lg:flex-row">
             <div className="flex flex-col items-center justify-center p-5 space-y-7 rounded-xl relative pb-12">
                 <div className="text-center text-xl md:text-3xl font-semibold text-gray-100 z-20">You are invited to our Client Appreciation Event:</div>
@@ -19,7 +19,7 @@ const SpooktacularLandingPage = () => {
                 </div>
             </figure>
         </header>
-        <div className="date px-5 py-20 bg-oresta-primary min-h-[300px]">
+        <div className="date px-5 py-20 bg-oresta-blue min-h-[300px]">
             <span className="text-lg md:text-xl font-light text-gray-50 block mb-10 text-center">Join us for a day of fall fun as we celebrate YOU! Bring your family (and your furry friends!) to enjoy:</span>
             <ul className="list-inside list-disc font-light text-gray-100 text-lg md:text-xl space-y-3 w-fit mx-auto">
                 <li>Delicious snacks and treats</li>
@@ -29,7 +29,7 @@ const SpooktacularLandingPage = () => {
                 <li>Toasting s&apos;mores by the fire</li>
             </ul>
         </div>
-        <div className="date px-5 py-20 bg-oresta-light min-h-[300px] text-center">
+        <div className="date px-5 py-20 bg-oresta-moss min-h-[300px] text-center">
             <p className="text-lg md:text-xl font-light text-gray-800 mb-16">To get your free tickets, simply enter your name, email address, expected number of guests, and click submit!</p>
             <SpooktacularTicketsForm />
         </div>
