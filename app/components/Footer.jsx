@@ -4,11 +4,11 @@ import {TfiEmail} from "react-icons/tfi"
 import {SlLocationPin} from "react-icons/sl"
 
 
-const Footer = () => {
+
+export const Footer = () => {
 
   const date = new Date()
   const year = date.getFullYear()
-
 
   return (
     <footer className="min-h-[200px] bg-oresta-blue text-oresta-gray">
@@ -62,5 +62,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer

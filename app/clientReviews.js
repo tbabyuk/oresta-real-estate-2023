@@ -15,7 +15,7 @@ export const clientReviewsArray = [
         icon: "/images/reviews/vania_gaquiere.png",
         text: "I am more than happy to recommend Oresta Kisil as a qualified Real Estate Agent. Oresta assisted me in renting out my King West loft during the summer 2017. She has provided a full-fledged service and it has been a wonderful experience at every stage of the process. She has been very helpful and exceptionally resourceful, especially considering she organized everything while I was out-of-province. My apartment was rented in a very short time period and every detail has been taken care of promptly. Oresta has always been a pleasure to deal with and she's always been available for follow-ups and to obtain any information I needed. Amongst other  things, she was able to assist me in getting my apartment painted and professionally cleaned and didn't hesitate to use her personal contacts. I will definitely retain her services the next time around.",
         link: "https://g.co/kgs/12137qu",
-        featured: true
+        featured: false
     },
     {
         name: "Inna K",
@@ -47,7 +47,7 @@ export const clientReviewsArray = [
         icon: "/images/reviews/taras_babyuk.png",
         text: "I needed to sell my condo and find a new one within a short timeframe and Oresta helped me do just that! She professional and always kept me informed of what was going on during our whole sales and search process. Definitely recommend!",
         link: "https://g.co/kgs/uiei8s7",
-        featured: true
+        featured: false
     },
     {
         name: "Sonya Terek",
@@ -63,7 +63,7 @@ export const clientReviewsArray = [
         icon: "/images/reviews/mariya_khymych.png",
         text: "We hired Oresta Kisil as our agent in June 2017 for the purchase of our condo. We had a smooth transaction with every detail taken care of. Oresta provides an exceptional experience and we are happy to recommend her to all our friends and family.",
         link: "https://g.co/kgs/Q6UpT6y",
-        featured: true
+        featured: false
     },
     {
         name: "megan yim",
