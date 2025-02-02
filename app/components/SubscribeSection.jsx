@@ -72,7 +72,7 @@ export const SubscribeSection = () => {
                             value={contactEmail}
                             placeholder="enter your email address" 
                             required />
-                        <button className="h-10 w-full oresta-action-light" disabled={isPending}>{isPending ? "One Minute..." : "SUBSCRIBE"}</button>
+                        <button className="h-10 w-full text-gray-100 bg-oresta-moss hover:bg-oresta-moss-2" disabled={isPending}>{isPending ? "One Minute..." : "SUBSCRIBE"}</button>
                         </form>
                     )
                 }

@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         "oresta-blue": "#2F4857",
         "oresta-moss": "#A4C7BC",
+        "oresta-moss-2": "#93BDB0",
         "oresta-gray": "#E6E6E6",
         "oresta-blue-gray": "#B6BEC4",
         "oresta-blue-gray-hover": "#AAB4BB",

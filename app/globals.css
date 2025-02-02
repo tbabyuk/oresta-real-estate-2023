@@ -37,6 +37,7 @@ button:disabled {
     @apply mx-auto bg-oresta-blue-gray hover:bg-oresta-blue-gray-hover text-gray-100 rounded focus:outline-none focus:ring-2 focus:ring-oresta-moss;
 }
 
-.gsdf {
-    color: #f48a3e
-}
+
+/* .gsdf {
+    color: #93bdb0
+} */
