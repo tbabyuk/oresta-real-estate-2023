@@ -19,7 +19,7 @@ export const Hero = () => {
         <div className="w-[50%] lg:w-auto flex lg:flex-shrink-0 flex-col items-center justify-evenly">
             <Link href="/" className="block h-fit"><img src="/images/logo_white_transparent.png" alt="Oresta Kisil Real Estate logo" className="flex-shrink-0 bg-black/20 rounded-xl h-[85px] sm:h-[120px] lg:h-[140px]" /></Link>
             <h1 className="lg:hidden px-3 text-center text-xl">Find your Dream Home in Toronto & the GTA</h1>
-            <Link href="/contact"><button className="oresta-action-orange w-[170px] h-[45px] lg:w-[290px] lg:h-[60px] lg:text-xl">Get In Touch</button></Link>
+            <Link href="/contact#contact-form"><button className="oresta-action-orange w-[170px] h-[45px] lg:w-[290px] lg:h-[60px] lg:text-xl">Get In Touch</button></Link>
         </div>
     </div>
   )

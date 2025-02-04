@@ -11,7 +11,7 @@ const Contact = () => {
     return (
       <main className="px-5 sm:px-20 md:px-40 lg:px-20 py-20 md:py-22 text-gray-600">
         {/* CONTACT FORM */}
-        <h1 className="text-center text-4xl mb-20">Contact</h1>
+        <h1 className="text-center text-4xl mb-20" id="contact-form">Contact</h1>
         <div className="flex flex-col gap-8 lg:flex-row">
             <div className="flex-1 flex flex-col items-center mb-12 md:mb-0">
                 <ContactForm />

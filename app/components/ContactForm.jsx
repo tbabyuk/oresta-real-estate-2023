@@ -1,6 +1,6 @@
 "use client"
 
-import {useRef, useState} from "react"
+import {useRef, useState, useEffect} from "react"
 
 export const ContactForm = () => {
   
@@ -36,6 +36,11 @@ export const ContactForm = () => {
             setSent(true)
         }
     }
+
+
+    // useEffect(() => {
+    //     nameRef.current.focus()
+    // }, [])
 
 
   return (
