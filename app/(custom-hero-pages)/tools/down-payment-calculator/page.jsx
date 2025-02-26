@@ -52,7 +52,7 @@ const DownPaymentCalculatorPage = () => {
             const downPaymentAmount = downPaymentOnFirst500K + downPaymentOnAmountAbove
             const formatted = formatCurrency(downPaymentAmount)
             setFormattedDownPaymentAmount(formatted)
-            const explanationText=`Since your mortgage amount is above $500,000 but under $1,500,000 - your down payment will be calculated as follows: <br /><br /> &bull; 5% on the first $500,000 - which is $25,000 <br /><br /> AND <br /><br />&bull; 10% on the amount above $500,000. <br />In your case, the amount above $500,000 is ${formatCurrency(amountAbove500K)}, 10% of which is ${formatCurrency(downPaymentOnAmountAbove)}. For a total down payment of ${formatted}`
+            const explanationText=`Since your mortgage amount is above $500,000 but under $1,500,000 - your down payment is calculated as follows: <br /><br /> &bull; 5% on the first $500,000 - which is $25,000 <br /><br /> AND <br /><br />&bull; 10% on the amount above $500,000. <br />In your case, the amount above $500,000 is ${formatCurrency(amountAbove500K)}, 10% of which is ${formatCurrency(downPaymentOnAmountAbove)}. For a total down payment of ${formatted}`
             setExplanation(explanationText)
 
         } else if(mortgageAmount > 1500000) {
@@ -94,23 +94,16 @@ const DownPaymentCalculatorPage = () => {
                     <button className="h-10 w-full rounded oresta-action-orange">Calculate</button>
                 </form>
                 {/* results div */}
-                <div className="mx-auto px-10 py-5 sm:w-[380px] rounded border-2 shadow-lg mb-40">
-                    {formattedDownPaymentAmount && (
-                        <p className="text-green-600">Your down payment amount is: <span className="font-bold">{formattedDownPaymentAmount}</span></p>
-                    )}
-                    {explanation && (
-                        <p dangerouslySetInnerHTML={{__html: explanation}} className="text-sm mt-4" />
-                    )}
-                    {/* {explanations.case1 && (
-                        <p className="text-sm mt-4">{explanations.case1}</p>
-                    )}
-                    {explanations.case2 && (
-                        <p dangerouslySetInnerHTML={{__html: explanations.case2}} className="text-sm mt-4"></p>
-                    )}
-                    {explanations.case3 && (
-                        <p className="text-sm mt-4">{explanations.case3}</p>
-                    )} */}
-                </div>
+                {formattedDownPaymentAmount && (
+                    <div className="mx-auto px-10 py-5 sm:w-[380px] rounded border-2 shadow-lg">
+                        {formattedDownPaymentAmount && (
+                            <p className="text-green-600">Your down payment amount is: <span className="font-bold">{formattedDownPaymentAmount}</span></p>
+                        )}
+                        {explanation && (
+                            <p dangerouslySetInnerHTML={{__html: explanation}} className="text-sm mt-4" />
+                        )}
+                    </div>
+                )}
             </div>
         </main>
     )
