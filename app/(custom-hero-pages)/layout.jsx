@@ -1,14 +1,13 @@
 import { Header } from "../components/Header"
-import { Hero } from "../components/Hero"
+import { NeighbourhoodsHero } from "./components/NeighbourhoodsHero"
 import { Footer } from "../components/Footer"
 
 
-export default function TestLayout({ children }) {
+export default function NoHeroLayout({ children }) {
     return (
       <>
         <Header />
-        <Hero />
-        {children}
+            {children}
         <Footer />
       </>
     )
