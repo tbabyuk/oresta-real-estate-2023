@@ -2,7 +2,7 @@
 
 
 import { DefaultHero } from "../../components/DefaultHero"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 
 
 const DownPaymentCalculatorPage = () => {
@@ -10,6 +10,7 @@ const DownPaymentCalculatorPage = () => {
     const [formattedMortgageAmount, setFormattedMortgageAmount] = useState("")
     const [formattedDownPaymentAmount, setFormattedDownPaymentAmount] = useState("")
     const [explanation, setExplanation] = useState("")
+    const inputRef = useRef()
 
     // Function to format number with commas
     const formatNumber = (value) => {
@@ -63,30 +64,33 @@ const DownPaymentCalculatorPage = () => {
             const explanationText = `Since your mortgage amount is above $1,500,000 - your down payment will be 20% of your mortgage amount, which works out to ${formatted}.`
             setExplanation(explanationText)
         }
-
-        
     }
+
+    useEffect(() => {
+        inputRef.current.focus()
+    }, [])
 
 
     return(
         <main>
             <DefaultHero 
                 heroClass="bg-[url('/images/pages/down-payment-calculator/down-payment-calculator-header-bg.png')]" 
-                heroTitle="Mortgage Down Payment Calculator" 
+                heroTitle="Down Payment Calculator"
             />
             <div className="px-5 sm:px-20 md:px-40 lg:px-20 py-20 md:py-22 bg-[url('/images/pages/down-payment-calculator/down-payment-calculator-page-bg.png')] bg-cover overflow-hidden">
                 <h2 className="text-[1.4rem] text-center mb-4">Let&apos;s calculate your down payment!</h2>
                 <form className="mx-auto px-10 py-5 w-full sm:w-[380px] bg-gray-100 rounded border-2 shadow-lg mb-4" onSubmit={handleCalculateDownPayment}>
                     <div className="mb-5">
-                        <label htmlFor="mortgage-amount" className="block mb-2">Enter your total mortgage amount:</label>
+                        <label htmlFor="mortgage-amount" className="block mb-2 text-[0.95rem] sm:text-[1rem]">Enter purchase price of your home</label>
                         <div className="flex items-center">
                             <span className="text-lg absolute -translate-x-[14px]">$</span>
                             <input 
                                 type="text" 
                                 className="h-10 w-full border-gray-300 oresta-form-input" 
-                                placeholder="mortgage amount"
+                                placeholder="purchase price"
                                 value={formattedMortgageAmount}
                                 onChange={(e) => handleChange(e.target.value)}
+                                ref={inputRef}
                                 required 
                             />
                         </div>
