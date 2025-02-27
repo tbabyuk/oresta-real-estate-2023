@@ -7,7 +7,7 @@ import { useState, useRef, useEffect } from "react"
 
 const DownPaymentCalculatorPage = () => {
 
-    const [formattedMortgageAmount, setFormattedMortgageAmount] = useState("")
+    const [formattedPurchasePrice, setFormattedPurchasePrice] = useState("")
     const [formattedDownPaymentAmount, setFormattedDownPaymentAmount] = useState("")
     const [explanation, setExplanation] = useState("")
     const inputRef = useRef()
@@ -30,38 +30,38 @@ const DownPaymentCalculatorPage = () => {
 
     const handleChange = (value) => {
         const formattedValue = formatNumber(value);
-        setFormattedMortgageAmount(formattedValue);
+        setFormattedPurchasePrice(formattedValue);
     };
 
     const handleCalculateDownPayment = (e) => {
         e.preventDefault()
-        const mortgageAmount = +formattedMortgageAmount.replace(/,/g, '');
+        const purchasePrice = +formattedPurchasePrice.replace(/,/g, '');
 
-        if(mortgageAmount <= 500000) {
+        if(purchasePrice <= 500000) {
 
-            const downPaymentAmount = mortgageAmount * 0.05
+            const downPaymentAmount = purchasePrice * 0.05
             const formatted = formatCurrency(downPaymentAmount)
             setFormattedDownPaymentAmount(formatted)
-            const explanationText = `Since your mortgage amount is at or below $500,000 - your down payment will be 5% of your mortgage amount, which works out to ${formatted}.`
-            setExplanation(explanationText)
+            const explanationText = `Since your purchase price is at or below $500,000 - your down payment will be 5% of your purchase price, which works out to ${formatted}.`
+            setExplanation(explanationText) 
 
-        } else if(mortgageAmount > 500000 && mortgageAmount <= 1500000) {
+        } else if(purchasePrice > 500000 && purchasePrice <= 1500000) {
 
             const downPaymentOnFirst500K = 25000 //5% of the first $500K
-            const amountAbove500K = mortgageAmount - 500000
+            const amountAbove500K = purchasePrice - 500000
             const downPaymentOnAmountAbove = amountAbove500K * 0.10
             const downPaymentAmount = downPaymentOnFirst500K + downPaymentOnAmountAbove
             const formatted = formatCurrency(downPaymentAmount)
             setFormattedDownPaymentAmount(formatted)
-            const explanationText=`Since your mortgage amount is above $500,000 but under $1,500,000 - your down payment is calculated as follows: <br /><br /> &bull; 5% on the first $500,000 - which is $25,000 <br /><br /> AND <br /><br />&bull; 10% on the amount above $500,000. <br />In your case, the amount above $500,000 is ${formatCurrency(amountAbove500K)}, 10% of which is ${formatCurrency(downPaymentOnAmountAbove)}. For a total down payment of ${formatted}`
+            const explanationText=`Since your purchase price is above $500,000 but under $1,500,000 - your down payment is calculated as follows: <br /><br /> &bull; 5% on the first $500,000 - which is $25,000 <br /><br /> AND <br /><br />&bull; 10% on the amount above $500,000. <br />In your case, the amount above $500,000 is ${formatCurrency(amountAbove500K)}, 10% of which is ${formatCurrency(downPaymentOnAmountAbove)}. For a total down payment of ${formatted}`
             setExplanation(explanationText)
 
-        } else if(mortgageAmount > 1500000) {
+        } else if(purchasePrice > 1500000) {
 
-            const downPaymentAmount = mortgageAmount * .20
+            const downPaymentAmount = purchasePrice * .20
             const formatted = formatCurrency(downPaymentAmount)
             setFormattedDownPaymentAmount(formatted)
-            const explanationText = `Since your mortgage amount is above $1,500,000 - your down payment will be 20% of your mortgage amount, which works out to ${formatted}.`
+            const explanationText = `Since your purchase price is above $1,500,000 - your down payment will be 20% of your purchase price, which works out to ${formatted}.`
             setExplanation(explanationText)
         }
     }
@@ -81,14 +81,15 @@ const DownPaymentCalculatorPage = () => {
                 <h2 className="text-[1.4rem] text-center mb-4">Let&apos;s calculate your down payment!</h2>
                 <form className="mx-auto px-10 py-5 w-full sm:w-[380px] bg-gray-100 rounded border-2 shadow-lg mb-4" onSubmit={handleCalculateDownPayment}>
                     <div className="mb-5">
-                        <label htmlFor="mortgage-amount" className="block mb-2 text-[0.95rem] sm:text-[1rem]">Enter purchase price of your home</label>
+                        <label htmlFor="purchase-price" className="block mb-2 text-[0.95rem] sm:text-[1rem]">Enter purchase price of your home</label>
                         <div className="flex items-center">
                             <span className="text-lg absolute -translate-x-[14px]">$</span>
                             <input 
-                                type="text" 
+                                type="text"
+                                id="purchase-price"
                                 className="h-10 w-full border-gray-300 oresta-form-input" 
                                 placeholder="purchase price"
-                                value={formattedMortgageAmount}
+                                value={formattedPurchasePrice}
                                 onChange={(e) => handleChange(e.target.value)}
                                 ref={inputRef}
                                 required 
