@@ -1,5 +1,7 @@
 import { ClientReviewCard } from "@/app/components/ClientReviewCard"
 import { clientReviewsArray } from "@/app/clientReviews"
+import { PageHeading } from "@/app/components/PageHeading"
+
 
 
 export const metadata = {
@@ -26,7 +28,7 @@ const HappyClients = async () => {
 
     return (
       <main className="px-5 xl:px-30 py-20 md:py-22 text-gray-600">
-        <h1 className="text-center text-4xl mb-20">Happy Clients</h1>
+        <PageHeading title="Happy Clients" />
         <div className="flex justify-center flex-wrap gap-5">
             {clientReviewsArray && 
                 clientReviewsArray.map((review, index) => <ClientReviewCard key={index} review={review} />

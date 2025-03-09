@@ -1,11 +1,12 @@
 import { ContactForm } from "./ContactForm"
+import { SectionHeading } from "./SectionHeading"
 
 
 export const ContactSection = () => {
 
     return (
         <section className="px-5 md:px-20 py-16 bg-gray-100">
-            <h2 className="text-center text-3xl mb-10">Contact Me</h2>
+            <SectionHeading title="Contact Me" />
             <div className="flex flex-col gap-8 lg:flex-row">
                 <div className="flex-1 flex flex-col items-center mb-12 md:mb-0">
                     <ContactForm />

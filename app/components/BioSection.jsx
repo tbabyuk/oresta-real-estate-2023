@@ -1,10 +1,12 @@
+import { SectionHeading } from "./SectionHeading"
+
 
 
 export const BioSection = () => {
 
     return(
         <section className="px-5 md:px-20 py-16">
-            <h1 className="text-center text-3xl mb-20">Buying and Selling homes in Toronto, Mississauga, and the GTA!</h1>
+            <SectionHeading title="About Me" />
             <div className="leading-8">
                 <div className="shrink-0 flex justify-center md:me-6 mb-10 md:mb-0 overflow-hidden md:float-left">
                     <img src="/images/oresta_about_sm.jpg" className="rounded-md" style={{height: "260px"}} />
