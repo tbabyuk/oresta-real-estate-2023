@@ -44,6 +44,12 @@ button:disabled {
 }
 
 
-/* .gsdf {
-    color: #93bdb0
-} */
+/* Slider Styles */
+.oresta-hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+  
+.oresta-hide-scrollbar {
+scrollbar-width: none; 
+-ms-overflow-style: none; 
+}

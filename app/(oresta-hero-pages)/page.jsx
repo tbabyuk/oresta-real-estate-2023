@@ -3,7 +3,7 @@ import { EventsSection } from "../components/EventsSection"
 import { ClientReviewsSection } from "../components/ClientReviewsSection"
 import { BioSection } from "../components/BioSection"
 import { ContactSection } from "../components/ContactSection"
-
+import { CurrentListingsSection } from "../components/CurrentListingsSection"
 
 
 export const metadata = {
@@ -18,7 +18,8 @@ const Home = () => {
     <>
       <SubscribeSection />
       <main className="text-gray-600">
-        <EventsSection />
+        {/* <EventsSection /> */}
+        <CurrentListingsSection />
         <ClientReviewsSection />
         <BioSection />
         <ContactSection />
