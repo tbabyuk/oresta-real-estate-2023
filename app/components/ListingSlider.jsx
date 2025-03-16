@@ -1,8 +1,8 @@
 "use client"
 
-import { useState, useRef } from "react";
-import { arlingtonListing } from "../data/data";
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import { useState, useEffect, useRef } from "react";
+import { arlingtonListingPhotosArray } from "../data/data";
+import { RiArrowRightSFill, RiArrowLeftSFill } from "react-icons/ri";
 
 
 
@@ -11,7 +11,7 @@ export const ListingSlider = () => {
     const itemWidth = 275 + 8 // item width + gap width
 
     const [photoZoomOpen, setPhotoZoomOpen] = useState(false)
-    const [activePhoto, setActivePhoto] = useState("")
+    const [activePhoto, setActivePhoto] = useState({})
 
     const handleScrollLeft = () => {
         if (scrollContainerRef.current) {
@@ -36,13 +36,56 @@ export const ListingSlider = () => {
         }
     }
 
+    const handlePrevPhoto = () => {
+        console.log("handlePrevPhoto FIRED")
+        const prevPhoto = activePhoto.id === 1 ? arlingtonListingPhotosArray[0] : arlingtonListingPhotosArray.find((photo) => photo.id === activePhoto.id - 1)
+        setActivePhoto(prevPhoto)
+    }
+
+    const handleNextPhoto = () => {
+        console.log("handleNextPhoto FIRED")
+        const nextPhoto = activePhoto.id === arlingtonListingPhotosArray.length ? arlingtonListingPhotosArray[arlingtonListingPhotosArray.length - 1] : arlingtonListingPhotosArray.find((photo) => photo.id === activePhoto.id + 1)
+        setActivePhoto(nextPhoto)
+    }
+
+    useEffect(() => {
+        
+        const handleKeyDown = (e) => {
+            if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+            e.preventDefault()
+            if (e.key === "ArrowRight") {
+                if(photoZoomOpen) {
+                    handleNextPhoto()
+                } else {
+                    handleScrollRight()
+                }
+            }
+            if (e.key === "ArrowLeft") {
+                console.log("Left arrow fired")
+                if(photoZoomOpen) {
+                    handlePrevPhoto()
+                } else {
+                    handleScrollLeft()
+                }
+            }
+            }
+        };
+    
+        window.addEventListener("keydown", handleKeyDown);
+    
+        return () => {
+          window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [photoZoomOpen, activePhoto]);
+
+
     return(
         <>
             <div className="relative mt-10">
-                <FaArrowAltCircleLeft className="hidden md:flex z-10 absolute left-0 top-1/2 -translate-y-1/2 text-white/60 cursor-pointer" size={50} onClick={handleScrollLeft} />
+                <RiArrowLeftSFill className="hidden md:flex z-10 absolute -left-5 top-1/2 -translate-y-1/2 text-white/60 cursor-pointer no-select" size={80} onClick={handleScrollLeft} />
                 <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory oresta-hide-scrollbar" ref={scrollContainerRef}>
-                    {arlingtonListing.map((photo, index) => (
-                        <div key={index} className="relative rounded-lg bg-green-500 flex-shrink-0 snap-start md:snap-none" onClick={() => handleZoomPhoto(photo.src)}>
+                    {arlingtonListingPhotosArray.map((photo) => (
+                        <div key={photo.id} className="relative rounded-lg flex-shrink-0 snap-start md:snap-none" onClick={() => handleZoomPhoto(photo)}>
                             <img
                                 src={photo.src}
                                 className="rounded-lg cursor-pointer"
@@ -52,15 +95,20 @@ export const ListingSlider = () => {
                         </div>
                     ))}
                 </div>
-                <FaArrowAltCircleRight className="hidden md:flex z-10 absolute right-0 top-1/2 -translate-y-1/2 text-white/60 cursor-pointer" size={50} onClick={handleScrollRight} />
+                <RiArrowRightSFill className="hidden md:flex z-10 absolute -right-5 top-1/2 -translate-y-1/2 text-white/60 cursor-pointer no-select" size={80} onClick={handleScrollRight} />
             </div>
             {photoZoomOpen && (
                 <div className="fixed cursor-pointer top-0 left-0 w-full h-full z-50 bg-black/60 flex justify-center items-center overflow-y-hidden" data-role="modal" onClick={(e) => handleCloseZoomPhoto(e)}>
                     <span className="exit absolute cursor-pointer top-1 right-5 text-gray-100 font-semibold text-[2.5rem]" data-role="modal" onClick={(e) => handleCloseZoomPhoto(e)}>&#10005;</span>
-                    <img
-                        src={activePhoto}
-                        className="rounded-lg cursor-default w-[800px] max-w-full"
-                    />
+                    <div className="relative">
+                        <img
+                            src={activePhoto.src}
+                            className="rounded-lg cursor-default w-[800px] max-w-full"
+                        />
+
+                        <RiArrowLeftSFill className={`z-10 absolute ${activePhoto.id === 1 && "hidden"} -left-5 top-1/2 -translate-y-1/2 cursor-pointer text-white no-select`} size={80} onClick={handlePrevPhoto} />
+                        <RiArrowRightSFill className={`z-10 absolute ${activePhoto.id === arlingtonListingPhotosArray.length && "hidden"} -right-5 top-1/2 -translate-y-1/2 cursor-pointer text-white no-select`} size={80} onClick={handleNextPhoto} />
+                    </div>
                 </div>
             )}
         </>

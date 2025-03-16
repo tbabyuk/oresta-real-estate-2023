@@ -53,3 +53,8 @@ button:disabled {
 scrollbar-width: none; 
 -ms-overflow-style: none; 
 }
+
+.no-select {
+    user-select: none;
+    outline: none;
+}
