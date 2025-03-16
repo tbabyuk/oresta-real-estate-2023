@@ -1,7 +1,7 @@
 import { ClientReviewCard } from "@/app/components/ClientReviewCard"
 import { clientReviewsArray } from "@/app/clientReviews"
 import { PageHeading } from "@/app/components/PageHeading"
-
+import { MotionWrapper } from "@/app/components/MotionWrapper"
 
 
 export const metadata = {
@@ -10,34 +10,23 @@ export const metadata = {
 }
 
 
-// const fetchReviews = async () => {
-//       const res = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJo0v07uJHK4gRL9AzD12-yxM&key=${process.env.GOOGLE_REVIEWS_API_KEY}&fields=reviews&maxheight=10`, {
-//         next: {
-//             // revalidate: 604800
-//             revalidate: 0
-//         }
-//       })
-//       const data = await res.json()
-//       return data.result.reviews
-// }
 
-
-const HappyClients = async () => {
-
-  // const reviews = await fetchReviews();
+const HappyClientsPage = async () => {
 
     return (
-      <main className="px-5 xl:px-30 py-20 md:py-22 text-gray-600">
-        <PageHeading title="Happy Clients" />
-        <div className="flex justify-center flex-wrap gap-5">
-            {clientReviewsArray && 
-                clientReviewsArray.map((review, index) => <ClientReviewCard key={index} review={review} />
-            )}
-        </div>
-      </main>
+      <MotionWrapper>
+        <main className="px-5 xl:px-30 py-20 md:py-22 text-gray-600">
+          <PageHeading title="Happy Clients" />
+          <div className="flex justify-center flex-wrap gap-5">
+              {clientReviewsArray && 
+                  clientReviewsArray.map((review, index) => <ClientReviewCard key={index} review={review} />
+              )}
+          </div>
+        </main>
+      </MotionWrapper>
     )
   }
   
-  export default HappyClients;
+  export default HappyClientsPage;
   
   
