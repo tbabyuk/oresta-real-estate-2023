@@ -6,7 +6,7 @@ export const BioSection = () => {
 
     return(
         <MotionWrapper>
-            <section>
+            <section className="px-5 md:px-20 py-16">
                 <SectionHeading title="About Me" />
                 <div className="leading-8">
                     <div className="shrink-0 flex justify-center md:me-6 mb-10 md:mb-0 overflow-hidden md:float-left">

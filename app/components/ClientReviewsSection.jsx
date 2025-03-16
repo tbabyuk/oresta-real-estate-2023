@@ -9,7 +9,7 @@ export const ClientReviewsSection = () => {
 
     return (
         <MotionWrapper>
-            <section>
+            <section className="px-5 md:px-20 py-16 bg-gray-100">
                 <SectionHeading title="Happy Clients" />
                 <div className="flex justify-center flex-wrap gap-5">
                     {clientReviewsArray && 
