@@ -1,7 +1,7 @@
 "use client"
 
 
-import { DefaultHero } from "../../components/DefaultHero"
+import { CustomHeader } from "../../components/CustomHeader"
 import { useState, useRef, useEffect } from "react"
 
 
@@ -73,11 +73,11 @@ const DownPaymentCalculatorPage = () => {
 
     return(
         <main>
-            <DefaultHero 
-                heroClass="bg-[url('/images/pages/down-payment-calculator/down-payment-calculator-header-bg.png')]" 
-                heroTitle="Down Payment Calculator"
+            <CustomHeader 
+                headerClass="bg-[url('/images/pages/down-payment-calculator/down-payment-calculator-header-bg.png')]" 
+                headerTitle="Down Payment Calculator"
             />
-            <div className="px-5 sm:px-20 md:px-40 lg:px-20 py-20 md:py-22 bg-[url('/images/pages/down-payment-calculator/down-payment-calculator-page-bg.png')] bg-cover overflow-hidden">
+            <div className="px-5 py-20 bg-[url('/images/pages/down-payment-calculator/down-payment-calculator-page-bg.png')] bg-cover overflow-hidden">
                 <h2 className="text-[1.4rem] text-center mb-4">Let&apos;s calculate your down payment!</h2>
                 <form className="mx-auto px-10 py-5 w-full sm:w-[380px] bg-gray-100 rounded border-2 shadow-lg mb-4" onSubmit={handleCalculateDownPayment}>
                     <div className="mb-5">

@@ -25,7 +25,7 @@ export const AboutSection = () => {
 
                     <p className="mb-6">For Oresta, the foundation of a happy and healthy community begins at a micro level, emphasizing the significance of cultivating meaningful relationships. She views this process as inherently human, requiring kindness and authenticity rather than excessive effort.</p>
 
-                    <p className="mb-6">In summary, Oresta&apos;s story is one of a Realtor who has not only found success in her professional journey but has also made a conscious effort to contribute positively to her community and industry, embodying values of transparency, positivity, and a strong focus on relationships.</p>
+                    <p>In summary, Oresta&apos;s story is one of a Realtor who has not only found success in her professional journey but has also made a conscious effort to contribute positively to her community and industry, embodying values of transparency, positivity, and a strong focus on relationships.</p>
                 </div>
             </section>
         </MotionWrapper>

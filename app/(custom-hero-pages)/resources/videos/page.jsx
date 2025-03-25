@@ -1,21 +1,25 @@
-"use client"
 
-import ReactPlayer from "react-player"
+import { CustomHeader } from "../../components/CustomHeader"
+import { VideoComponent } from "@/app/components/VideoComponent"
 
 
 const VideosPage = () => {
   return (
-    <main className="px-5 md:px-20 xl:px-40 py-20 md:py-22 text-gray-600">
-        <h1 className="text-center text-4xl sm:mb-20">Videos</h1>
-        <div className="flex justify-center">
-            <ReactPlayer 
-                url='/the_smith_manoeuvre.mp4' 
-                controls 
-                className="w-[100%] md:w-[50%]"
-            />
+    <main>
+        <CustomHeader 
+            headerClass="bg-[url('/images/pages/videos/video-page-header-bg.png')]" 
+            headerTitle="Videos"
+        />
+        <div className="px-5 py-20 flex justify-center items-center bg-[url('/images/pages/videos/video-page-bg.png')] bg-cover">
+            <div className="max-w-[500px] rounded-xl overflow-hidden">
+              <VideoComponent 
+                  poster="/images/pages/videos/mortgage-strategies-video-thumbnail.png" 
+                  src="/the_smith_manoeuvre.mp4"
+              />
+          </div>
         </div>
     </main>  
   )
 }
-
+// /the_smith_manoeuvre.mp4
 export default VideosPage
