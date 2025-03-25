@@ -105,3 +105,20 @@ scrollbar-width: none;
 .tilt-divider-bottom .shape-fill {
     fill: #FFFFFF;
 }
+
+
+.oresta-section {
+    @apply px-5 md:px-20 pt-12 pb-20 relative
+}
+
+.bg-oresta-light-green {
+    @apply bg-[url('/images/bg-oresta-light-green.png')]
+}
+
+.bg-oresta-light-green-with-image {
+    @apply bg-[url('/images/bg-oresta-light-green-with-image.png')] bg-center bg-cover
+}
+
+.bg-oresta-contact {
+    @apply bg-[url('/images/bg-oresta-contact.png')] bg-center bg-cover
+}

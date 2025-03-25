@@ -7,7 +7,7 @@ import Link from "next/link";
 export const ClientReviewCard = ({review}) => {
 
     return ( 
-        <div href={review.link} className="w-full max-w-[420px] relative flex flex-col p-5 rounded-sm border-2 border-s-4 border-s-oresta-orange/60 shadow-md bg-white shadow-gray-200">
+        <div href={review.link} className="w-full max-w-[420px] relative flex flex-col p-5 rounded-sm border-2 border-s-4 border-s-oresta-orange/60 shadow-md bg-white">
             <div className="flex gap-x-1">
                 <FaStar className="text-oresta-orange/60 text-xl"/>
                 <FaStar className="text-oresta-orange/60 text-xl"/>

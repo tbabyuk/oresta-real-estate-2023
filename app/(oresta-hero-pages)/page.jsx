@@ -1,7 +1,7 @@
 import { SubscribeSection } from "../components/SubscribeSection"
 import { EventsSection } from "../components/EventsSection"
-import { ClientReviewsSection } from "../components/ClientReviewsSection"
-import { BioSection } from "../components/BioSection"
+import { HappyClientsSection } from "../components/HappyClientsSection"
+import { AboutSection } from "../components/AboutSection"
 import { ContactSection } from "../components/ContactSection"
 import { CurrentListingsSection } from "../components/CurrentListingsSection"
 
@@ -20,8 +20,8 @@ const Home = () => {
       <main className="text-gray-600">
         {/* <EventsSection /> */}
         <CurrentListingsSection />
-        <ClientReviewsSection />
-        <BioSection />
+        <HappyClientsSection />
+        <AboutSection />
         <ContactSection />
       </main>
     </>

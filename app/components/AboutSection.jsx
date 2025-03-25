@@ -2,11 +2,12 @@ import { SectionHeading } from "./SectionHeading"
 import { MotionWrapper } from "./MotionWrapper"
 
 
-export const BioSection = () => {
+
+export const AboutSection = () => {
 
     return(
         <MotionWrapper>
-            <section className="px-5 md:px-20 py-16">
+            <section className="oresta-section">
                 <SectionHeading title="About Me" />
                 <div className="leading-8">
                     <div className="shrink-0 flex justify-center md:me-6 mb-10 md:mb-0 overflow-hidden md:float-left">

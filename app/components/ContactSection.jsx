@@ -8,7 +8,7 @@ export const ContactSection = () => {
 
     return (
         <MotionWrapper>
-            <section className="px-5 md:px-20 py-16 bg-gray-100">
+            <section className="oresta-section bg-oresta-contact">
                 <SectionHeading title="Contact Me" />
                 <div className="flex flex-col gap-8 lg:flex-row">
                     <div className="flex-1 flex flex-col items-center mb-12 md:mb-0">

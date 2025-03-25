@@ -51,7 +51,7 @@ export const SubscribeSection = () => {
 
 
     return(
-        <div className="px-5 py-8 bg-gray-200/50">
+        <div className="px-5 py-8 bg-gray-200/60">
             <div className="max-w-[700px] mx-auto">
                 <div className="text-3xl mb-3 text-gray-400/80 text-center">Subscribe to my monthly newsletter!</div>
                 {successMessage && 
