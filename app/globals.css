@@ -36,7 +36,7 @@ button:disabled {
 }
 
 .oresta-action-orange {
-    @apply mx-auto bg-oresta-orange text-gray-100 rounded hover:bg-oresta-orange-hover focus:outline-none focus:ring-2 focus:ring-oresta-moss;
+    @apply bg-oresta-orange text-gray-100 rounded hover:bg-oresta-orange-hover focus:outline-none focus:ring-2 focus:ring-oresta-moss;
 }
 
 .oresta-action-light {
