@@ -16,7 +16,7 @@ export const Header = () => {
             <a href="tel:+14163195784" className="flex flex-row md:ms-auto md:me-8 items-center hover:text-oresta-moss text-sm md:text-[0.9rem]">
                 <FiPhoneCall className="hidden md:block me-2" />(416) 319-5748
             </a>
-            <Link href="/contact#contact-form" className="px-3 py-2 font-semibold oresta-action-orange text-sm">Get in Touch</Link>
+            <Link href="/contact#contact-form" className="px-3 py-2 font-semibold oresta-action-orange text-sm">Contact Me</Link>
         </div>
         {/* NAVIGATION */}
         <Navbar />
