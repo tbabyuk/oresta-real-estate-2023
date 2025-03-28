@@ -12,9 +12,9 @@ export const Hero = () => {
             <img src="/images/oresta_banner_image.png" alt="photo of Oresta Kisil" className="w-[115%] max-w-[235px] h-[350px]" />
         </div>
         <div className="w-[50%] md:w-[60%] lg:w-[45%] p-1 flex flex-col justify-center">
-            <h1 className="flex flex-col items-start md:mb-3">
-                <span className="text-3xl md:text-4xl font-semibold border-oresta-blue/70 border-b-2 pb-3 mb-3">Oresta Kisil</span>
-                <span className="text-oresta-blue/70 text-2xl leading-9">Your west-end Toronto and GTA Realtor</span>
+            <h1 className="flex flex-col items-start md:mb-3 text-gray-500/90">
+                <span className="text-3xl md:text-4xl font-semibold border-gray-500/90 border-b-2 pb-3 mb-3">Oresta Kisil</span>
+                <span className="text-2xl leading-9">Your west-end Toronto and GTA Realtor</span>
             </h1>
             <ul className="hidden md:flex md:flex-col md:text-xl space-y-3 list-inside list-disc text-lg">
                 <li>Bringing ease and confidence to your real estate journey</li>
