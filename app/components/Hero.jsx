@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <div className="h-[325px] flex justify-evenly px-0 md:px-5 bg-[url('/images/oresta_hero_bg_light_full.png')] bg-center bg-cover overflow-hidden">
         <div className="w-[50%] md:w-[40%] lg:w-[30%] flex lg:flex-shrink-0 justify-center">
-            <img src="/images/oresta_banner_image.png" alt="photo of Oresta Kisil" className="w-[115%] max-w-[235px] h-[350px]" />
+            <img src="/images/oresta_hero_image.png" alt="photo of Oresta Kisil" className="w-[115%] max-w-[235px] h-[350px]" />
         </div>
         <div className="w-[50%] md:w-[60%] lg:w-[45%] p-1 flex flex-col justify-center">
             <h1 className="flex flex-col items-start md:mb-3 text-gray-500/90">
