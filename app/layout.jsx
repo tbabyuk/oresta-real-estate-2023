@@ -23,11 +23,6 @@ const inter = Inter({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <head>
-      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
-      </head> */}
       <body className={`${inter.variable} ${griffy.variable}`}>{children}</body>
     </html>
   )
