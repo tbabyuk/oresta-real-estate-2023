@@ -1,10 +1,9 @@
 import Link from "next/link"
+import CalendlyWidgetButton from "./CalendlyWidgetButton";
 
 
 
 export const Hero = () => {
-
-  // lg:w-[260px]
 
   return (
     <div className="h-[325px] flex justify-evenly px-0 md:px-5 bg-[url('/images/oresta_hero_bg_light_full.png')] bg-center bg-cover overflow-hidden">
@@ -23,7 +22,7 @@ export const Hero = () => {
             <Link href="/contact#contact-form" className="md:hidden mt-5"><button className="oresta-action-orange w-[170px] h-[45px] lg:w-[290px] lg:h-[60px] lg:text-xl font-semibold">Get In Touch</button></Link>
         </div>
         <div className="hidden lg:flex lg:w-[25%] lg:items-center lg:justify-center">
-            <Link href="/contact#contact-form" className="mx-auto"><button className="oresta-action-orange w-[170px] h-[45px] lg:h-[60px] lg:text-xl font-semibold">Get In Touch</button></Link>
+            <CalendlyWidgetButton />
         </div>
     </div>
   )
