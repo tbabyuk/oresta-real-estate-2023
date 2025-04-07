@@ -2,11 +2,11 @@
 
 export const clientReviewsArray = [
     {
-        name: "Azra Bajric",
+        name: "Nkirote Kirimi",
         role: "former client",
-        icon: "/images/reviews/azra_bajric.png",
-        text: "Oresta is a gem! She is highly knowledgable about all things Real Estate but also kind, patient, positive, responsive and supportive. The best thing about her is that she will always be honest with you - and that's super important when it comes to choosing the right Realtor. I'm a big fan! Thanks for everything Oresta!",
-        link: "https://g.co/kgs/wsZLpME",
+        icon: "/images/reviews/nkirote_kirimi.png",
+        text: "I had the pleasure of working with Oresta to find a property, and I couldn’t be more impressed with her expertise and service. From our very first meeting, she demonstrated deep knowledge of the market and provided valuable insights into the best areas for potential returns. Oresta listened carefully to my goals and worked tirelessly to find properties that aligned with my objectives.",
+        link: "https://g.co/kgs/6ySFKWY",
         featured: true
     },
     {
