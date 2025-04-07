@@ -10,7 +10,7 @@ export default function CalendlyWidgetButton() {
 
   const openCalendly = () => {
     if (pageIsLoaded && window.Calendly) {
-      window.Calendly.initPopupWidget({ url: 'https://calendly.com/terry-dacapomusic' })
+      window.Calendly.initPopupWidget({ url: "https://calendly.com/orestakisilrealestate" })
     }
   }
 
