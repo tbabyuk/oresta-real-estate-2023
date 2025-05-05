@@ -1,6 +1,6 @@
 import { SectionHeading } from "./SectionHeading"
 import { MotionWrapper } from "./MotionWrapper"
-
+import { TiltDivider } from "./TiltDivider"
 
 
 export const AboutSection = () => {
@@ -27,6 +27,7 @@ export const AboutSection = () => {
 
                     <p>In summary, Oresta&apos;s story is one of a Realtor who has not only found success in her professional journey but has also made a conscious effort to contribute positively to her community and industry, embodying values of transparency, positivity, and a strong focus on relationships.</p>
                 </div>
+            {/* <TiltDivider style="shape-divider" /> */}
             </section>
         </MotionWrapper>
     )

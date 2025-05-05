@@ -2,10 +2,18 @@
 
 export const clientReviewsArray = [
     {
+        name: "Hassan Hamze",
+        role: "former client",
+        icon: "/images/reviews/hassan_hamze.png",
+        text: "I've bought and sold property many times, but this was by far the best experience I've ever had. In a tough market, Oresta sold my house in under a week—something I never thought possible. But for her, it was no match. She knew exactly how to position my home for success, and her knowledge, speed, and expertise made all the difference.",
+        link: "https://maps.app.goo.gl/swhr6L8nxRM3ijD28",
+        featured: true
+    },
+    {
         name: "Nkirote Kirimi",
         role: "former client",
         icon: "/images/reviews/nkirote_kirimi.png",
-        text: "I had the pleasure of working with Oresta to find a property, and I couldn’t be more impressed with her expertise and service. From our very first meeting, she demonstrated deep knowledge of the market and provided valuable insights into the best areas for potential returns. Oresta listened carefully to my goals and worked tirelessly to find properties that aligned with my objectives.",
+        text: "I had the pleasure of working with Oresta to find a property, and I couldn't be more impressed with her expertise and service. From our very first meeting, she demonstrated deep knowledge of the market and provided valuable insights into the best areas for potential returns. Oresta listened carefully to my goals and worked tirelessly to find properties that aligned with my objectives.",
         link: "https://g.co/kgs/6ySFKWY",
         featured: true
     },
@@ -48,14 +56,6 @@ export const clientReviewsArray = [
         text: "I needed to sell my condo and find a new one within a short timeframe and Oresta helped me do just that! She professional and always kept me informed of what was going on during our whole sales and search process. Definitely recommend!",
         link: "https://g.co/kgs/uiei8s7",
         featured: false
-    },
-    {
-        name: "Sonya Terek",
-        role: "former client",
-        icon: "/images/reviews/sonya_terek.png",
-        text: "Oresta was extremely helpful finding me a tenant for my apartment even though I was abroad. She provided great advice and service, and even helped me find a handyman to do some small work on the aparment while I was away. A reliable tenant was found very fast, within 2 days of the listing going up. I will definitely use her services again for my future real estate needs.",
-        link: "https://g.co/kgs/kk4iPTP",
-        featured: true
     },
     {
         name: "Mariya Khymych",
