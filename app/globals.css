@@ -120,6 +120,10 @@ scrollbar-width: none;
     @apply bg-[url('/images/bg-oresta-light-green-with-image.png')] bg-center bg-cover
 }
 
+.oresta-link {
+    @apply underline hover:text-oresta-blue;
+}
+
 
 
 /* TEST CODE */
