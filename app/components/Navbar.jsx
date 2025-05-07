@@ -59,6 +59,7 @@ export const Navbar = () => {
                         <ul className="w-full md:w-fit md:absolute md:-left-5 text-[0.95rem]" onMouseEnter={() => setResourcesSubmenuOpen(true)} onMouseLeave={() => setResourcesSubmenuOpen(false)}>
                             <li><Link href="/resources/down-payment-calculator" className="w-full whitespace-nowrap h-full flex justify-center md:justify-normal items-center px-5 py-2 bg-oresta-moss/90 hover:bg-oresta-moss-2" onClick={() => closeAllMenus()}>Down Payment Calculator</Link></li>
                             <li><Link href="/resources/videos" className="w-full whitespace-nowrap h-full flex justify-center md:justify-normal items-center px-5 py-2 bg-oresta-moss/90 hover:bg-oresta-moss-2" onClick={() => closeAllMenus()}>Videos</Link></li>
+                            <li><Link href="/resources/market-watch" className="w-full whitespace-nowrap h-full flex justify-center md:justify-normal items-center px-5 py-2 bg-oresta-moss/90 hover:bg-oresta-moss-2" onClick={() => closeAllMenus()}>Market Watch</Link></li>
                             {/* <li className="whitespace-nowrap"><Link href="/resources/preferred-vendors" className="w-full h-full flex justify-center md:justify-normal items-center px-5 py-2 bg-oresta-moss/80 hover:bg-oresta-moss-2"  onClick={() => closeAllMenus()}>Preferred Vendors</Link></li> */}
                         </ul>
                     }
