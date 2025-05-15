@@ -10,7 +10,7 @@ const FoundationsOfWealthLandingPage = () => {
     const lastNameRef = useRef()
     const phoneRef = useRef()
     const emailRef = useRef()
-    const numTicketsRef = useRef()
+    // const numTicketsRef = useRef()
   
     const [sending, setSending] = useState(false)
     const [successMessage, setSuccessMessage] = useState(false)
@@ -70,7 +70,7 @@ const FoundationsOfWealthLandingPage = () => {
           {!successMessage && !failMessage && 
               (<form className="w-[400px] max-w-[90%] rounded-md mx-auto flex flex-col bg-white p-8" onSubmit={handleSubmit}>
                     <div className="border-b-2 pb-4 mb-4 flex flex-col items-center">
-                        <h1 className="text-2xl font-semibold mb-2">"The Smith Manoeuvre"</h1>
+                        <h1 className="text-2xl font-semibold mb-2">&quot;The Smith Manoeuvre&quot;</h1>
                         <h2 className="text-2xl font-light mb-2">Webinar Registration Form</h2>
                         <h3 className="text-xl font-extralight">May 29, 2025 07:30 PM</h3>
                     </div>
