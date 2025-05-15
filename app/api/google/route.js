@@ -5,12 +5,11 @@ import nodemailer from "nodemailer"
 
 export async function POST(request) {
 
-    const {event, firstName, lastName, phone, email, numTickets} = await request.json()
+    const {event, firstName, lastName, phone, email} = await request.json()
 
-    console.log("Logging data from google API:", event, firstName, lastName, phone, email, numTickets)
+    console.log("Logging data from google API:", event, firstName, lastName, phone, email)
 
-
-    const foundationsGoogleScriptURL = "https://script.google.com/macros/s/AKfycbxyFIKq9Wnyb_3J2ZIxetUQWDiy3lvVN4PwZ1J8HbdGf4OX1JGyWO9TWSN5Ju8Bit0T/exec"
+    const foundationsGoogleScriptURL = "https://script.google.com/macros/s/AKfycbzcQxMoyfI3cNhWLRsM_2pyjNTb9FCqE-eDLOH1Of6xFrKsAxQuXlkafhl8fo9txVjc8w/exec"
 
 
     const transporter = nodemailer.createTransport({
@@ -23,23 +22,22 @@ export async function POST(request) {
 
     const mailOptions = {
     from: "terry@strictlywebdev.com",
-    to: ["terry@strictlywebdev.com"],
-    subject: "New Foundations of Wealth Registration",
+    to: "orestakisil@kw.com",
+    cc: "terry@strictlywebdev.com",
+
+    subject: "New Smith Manoeuvre Webinar Registration",
     html: `
-    <strong>First Name:</strong><br />
-    <small>${firstName}</small>
-    <hr>
-    <strong>Last Name:</strong><br />
-    <small>${lastName}</small>
-    <hr>
-    <strong>Phone:</strong><br />
-    <small>${phone}</small>
-    <hr>
-    <strong>Email:</strong><br />
-    <small>${email}</small>
-    <hr>
-    <strong>Number of tickets:</strong><br />
-    <small>${numTickets}</small>
+        <strong>First Name:</strong><br />
+        <small>${firstName}</small>
+        <hr>
+        <strong>Last Name:</strong><br />
+        <small>${lastName}</small>
+        <hr>
+        <strong>Phone:</strong><br />
+        <small>${phone ? phone : "not provided"}</small>
+        <hr>
+        <strong>Email:</strong><br />
+        <small>${email}</small>
     `
 }
 
@@ -52,12 +50,11 @@ export async function POST(request) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                "event": "FoundationsOfWealth",
+                event,
                 firstName,
                 lastName,
                 phone,
-                email,
-                numTickets
+                email
             })
         })
 
