@@ -68,10 +68,10 @@ const FoundationsOfWealthLandingPage = () => {
           }
 
           {!successMessage && !failMessage && 
-              (<form className="w-[400px] max-w-[90%] rounded-md mx-auto flex flex-col bg-white p-8" onSubmit={handleSubmit}>
+              (<form className="w-[400px] max-w-[90%] rounded-md mx-auto flex flex-col bg-white p-5" onSubmit={handleSubmit}>
                     <div className="border-b-2 pb-4 mb-4 flex flex-col items-center">
-                        <h1 className="text-2xl font-semibold mb-2">&quot;The Smith Manoeuvre&quot;</h1>
-                        <h2 className="text-2xl font-light mb-2">Webinar Registration Form</h2>
+                        <h1 className="text-2xl font-semibold mb-2 text-center">&quot;The Smith Manoeuvre&quot;</h1>
+                        <h2 className="text-2xl font-light mb-2 text-center">Webinar Registration Form</h2>
                         <h3 className="text-xl font-extralight">May 29, 2025 07:30 PM</h3>
                     </div>
                     <p className="text-sm mb-8">Learn how to reduce your mortgage&apos;s amortization period and become debt-free sooner</p>
