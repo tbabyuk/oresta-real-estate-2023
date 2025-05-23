@@ -19,35 +19,35 @@ const FoundationsOfWealthLandingPage = () => {
   
     const handleSubmit = async (e) => {
         e.preventDefault()
-        setSending(true)
 
         try {
-          const res = await fetch("/api/google", {
-              method: "POST",
-              headers: {
-                  "Content-Type": "application/json"
-              },
-              body: JSON.stringify({
-                  event: "The Smith Manoeuvre",
-                  firstName: firstNameRef.current.value,
-                  lastName: lastNameRef.current.value,
-                  phone: phoneRef.current.value || "",
-                  email: emailRef.current.value,
-                //   numTickets: numTicketsRef.current.value
-              })
-          })
+            setSending(true)
+            const res = await fetch("/api/google", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    event: "The Smith Manoeuvre",
+                    firstName: firstNameRef.current.value,
+                    lastName: lastNameRef.current.value,
+                    phone: phoneRef.current.value || "",
+                    email: emailRef.current.value,
+                    //   numTickets: numTicketsRef.current.value
+                })
+            })
   
-          console.log("logging server response from client:", res)
+            console.log("logging server response from client:", res)
   
-          if(res.ok) {
-              setSuccessMessage(true)
-          } else {
-              setFailMessage(true)
-          }
+            if(res.ok) {
+                setSuccessMessage(true)
+            } else {
+                setFailMessage(true)
+            }
         } catch (error) {
-              setFailMessage(true)
+            setFailMessage(true)
         } finally {
-              setSending(false)
+            setSending(false)
         }
     }
 
@@ -74,7 +74,7 @@ const FoundationsOfWealthLandingPage = () => {
                         <h2 className="text-2xl font-light mb-2 text-center">Webinar Registration Form</h2>
                         <h3 className="text-xl font-extralight">May 29, 2025 07:30 PM</h3>
                     </div>
-                    <p className="text-sm mb-8">Learn how to reduce your mortgage&apos;s amortization period and become debt-free sooner</p>
+                    <p className="text-sm mb-8 text-center">Learn how to reduce your mortgage&apos;s amortization period and become debt-free sooner</p>
                     <label className="mb-8 flex flex-col">
                         <span className="self-start mb-2">First Name:</span>
                         <input 
@@ -94,11 +94,12 @@ const FoundationsOfWealthLandingPage = () => {
                         />
                     </label>
                     <label className="mb-8 flex flex-col">
-                        <span className="self-start mb-2">Phone Number (optional):</span>
+                        <span className="self-start mb-2">Phone Number:</span>
                         <input 
                             type="tel" 
                             className="oresta-form-input bg-gray-100" 
-                            ref={phoneRef} 
+                            ref={phoneRef}
+                            required
                         />
                     </label>
                     <label className="mb-8 flex flex-col">

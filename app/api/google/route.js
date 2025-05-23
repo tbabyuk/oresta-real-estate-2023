@@ -34,7 +34,7 @@ export async function POST(request) {
         <small>${lastName}</small>
         <hr>
         <strong>Phone:</strong><br />
-        <small>${phone ? phone : "not provided"}</small>
+        <small>${phone}</small>
         <hr>
         <strong>Email:</strong><br />
         <small>${email}</small>
