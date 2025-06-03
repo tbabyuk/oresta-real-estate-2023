@@ -25,7 +25,7 @@ export const registerBookClubMember = async (formData) => {
 
         const mailOptions = {
             from: "terry@strictlywebdev.com",
-            to: ["tbabyuk@gmail.com"],
+            to: ["tbabyuk@gmail.com", "orestakisil@kw.com"],
             subject: "New Oresta Book Club Registration",
             html: `
                 <strong>Name:</strong><br />
