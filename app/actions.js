@@ -15,7 +15,7 @@ export const registerBookClubMember = async (formData) => {
 
 
     const registrationsGoogleScriptURL = process.env.BOOK_CLUB_REGISTRATION_APPS_SCRIPT_URL;
-    
+
 
     const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -28,7 +28,7 @@ export const registerBookClubMember = async (formData) => {
 
     const mailOptions = {
         from: "terry@strictlywebdev.com",
-        to: ["tbabyuk@gmail.com"], // "orestakisil@kw.com"
+        to: ["terry@strictlywebdev.com", "orestakisil@kw.com"],
         subject: "New Oresta Book Club Registration",
         html: `
             <strong>Name:</strong><br />
