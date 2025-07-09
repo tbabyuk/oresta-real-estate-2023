@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react";
-import { arlingtonListingPhotosArray } from "../data/data";
+import { magistrateListingPhotosArray } from "../data/data";
 import { RiArrowRightSFill, RiArrowLeftSFill } from "react-icons/ri";
 
 
@@ -38,13 +38,13 @@ export const ListingSlider = () => {
 
     const handlePrevPhoto = () => {
         console.log("handlePrevPhoto FIRED")
-        const prevPhoto = activePhoto.id === 1 ? arlingtonListingPhotosArray[0] : arlingtonListingPhotosArray.find((photo) => photo.id === activePhoto.id - 1)
+        const prevPhoto = activePhoto.id === 1 ? magistrateListingPhotosArray[0] : magistrateListingPhotosArray.find((photo) => photo.id === activePhoto.id - 1)
         setActivePhoto(prevPhoto)
     }
 
     const handleNextPhoto = () => {
         console.log("handleNextPhoto FIRED")
-        const nextPhoto = activePhoto.id === arlingtonListingPhotosArray.length ? arlingtonListingPhotosArray[arlingtonListingPhotosArray.length - 1] : arlingtonListingPhotosArray.find((photo) => photo.id === activePhoto.id + 1)
+        const nextPhoto = activePhoto.id === magistrateListingPhotosArray.length ? magistrateListingPhotosArray[magistrateListingPhotosArray.length - 1] : magistrateListingPhotosArray.find((photo) => photo.id === activePhoto.id + 1)
         setActivePhoto(nextPhoto)
     }
 
@@ -84,7 +84,7 @@ export const ListingSlider = () => {
             <div className="relative mt-10">
                 <RiArrowLeftSFill className="hidden md:flex z-10 absolute -left-3 top-1/2 -translate-y-1/2 text-white/80 cursor-pointer no-select" size={80} onClick={handleScrollLeft} />
                 <div className="flex gap-2 overflow-x-auto snap-x snap-mandatory oresta-hide-scrollbar" ref={scrollContainerRef}>
-                    {arlingtonListingPhotosArray.map((photo) => (
+                    {magistrateListingPhotosArray.map((photo) => (
                         <div key={photo.id} className="relative rounded-lg flex-shrink-0 snap-start md:snap-none" onClick={() => handleZoomPhoto(photo)}>
                             <img
                                 src={photo.src}
@@ -107,7 +107,7 @@ export const ListingSlider = () => {
                         />
 
                         <RiArrowLeftSFill className={`z-10 absolute ${activePhoto.id === 1 && "hidden"} -left-3 top-1/2 -translate-y-1/2 cursor-pointer text-white/90 no-select`} size={80} onClick={handlePrevPhoto} />
-                        <RiArrowRightSFill className={`z-10 absolute ${activePhoto.id === arlingtonListingPhotosArray.length && "hidden"} -right-3 top-1/2 -translate-y-1/2 cursor-pointer text-white/90 no-select`} size={80} onClick={handleNextPhoto} />
+                        <RiArrowRightSFill className={`z-10 absolute ${activePhoto.id === magistrateListingPhotosArray.length && "hidden"} -right-3 top-1/2 -translate-y-1/2 cursor-pointer text-white/90 no-select`} size={80} onClick={handleNextPhoto} />
                     </div>
                 </div>
             )}

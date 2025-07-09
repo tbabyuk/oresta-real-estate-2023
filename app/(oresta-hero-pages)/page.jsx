@@ -19,7 +19,7 @@ const Home = () => {
       <SubscribeSection />
       <main className="text-gray-600">
         {/* <EventsSection /> */}
-        {/* <CurrentListingsSection /> */}
+        <CurrentListingsSection />
         <HappyClientsSection />
         <AboutSection />
         <ContactSection />
