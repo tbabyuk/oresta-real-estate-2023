@@ -33,7 +33,7 @@ export const CurrentListingsSection = () => {
                     <li><h4 className="text-center sm:text-xl">$749,000</h4></li>
                 </ul>
                 <ListingSlider listingPhotosArray={dyerListingPhotosArray} />
-                <p className="my-10">Come for the house, stay for the neighbourhood 💛 Tucked away on a quiet court in the village of Hespeler, this beautifully maintained semi offers peaceful living, stunning sunsets, and a real sense of community. With trails, schools, and downtown charm just a short walk away, you&apos;ll love calling this home. Whether you're looking for your first home or downsizing smart, this one checks all the boxes.</p>
+                <p className="my-10">Come for the house, stay for the neighbourhood! Tucked away on a quiet court in the village of Hespeler, this beautifully maintained semi offers peaceful living, stunning sunsets, and a real sense of community. With trails, schools, and downtown charm just a short walk away, you&apos;ll love calling this home. Whether you&apos;re looking for your first home or downsizing smart, this one checks all the boxes.</p>
                 <div className="flex justify-center">
                     <Link href="/contact#contact-form" className="px-6 py-4 font-semibold oresta-action-orange">Contact Me About This Listing</Link>
                 </div>
