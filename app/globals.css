@@ -106,9 +106,8 @@ scrollbar-width: none;
     fill: #ECF2EF;
 }
 
-
 .oresta-section {
-    @apply px-5 md:px-20 pt-12 pb-20 relative; /* or more depending on the height of the SVG */
+    @apply px-5 md:px-20 py-[60px] relative; /* or more depending on the height of the SVG */
 
 }
 
