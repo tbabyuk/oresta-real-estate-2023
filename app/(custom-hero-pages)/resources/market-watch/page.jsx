@@ -40,7 +40,7 @@ const MarketWatchPage = () => {
                 ))}
            </div>
         </div>
-    </main>  
+    </main>
   )
 }
 
