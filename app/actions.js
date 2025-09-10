@@ -77,12 +77,5 @@ export const registerBookClubMember = async (formData) => {
         console.log("An error occurred:", error.message)
         return {success: false}
     }
-    
-
-    // return new Promise((resolve) => {
-    //     setTimeout(() => {
-    //         resolve({success: true})
-    //     }, 2000)
-    // })
 
 }

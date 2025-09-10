@@ -11,7 +11,7 @@ const SpooktacularLandingPage = () => {
             <div className="flex flex-col items-center justify-center p-5 space-y-7 rounded-xl relative pb-12">
                 <div className="text-center text-xl md:text-3xl font-semibold text-gray-100 z-20">You are invited to our Client Appreciation Event:</div>
                 <div className="text-center text-4xl md:text-[3.5rem] leading-[1.2] text-orange-500 z-20 griffy">MOUNTSBERG&apos;S SPOOKTACULAR HALLOWEEN !!!</div>
-                <div className="text-center text-xl md:text-3xl font-semibold text-gray-100 z-20">Sunday, Oct. 27, 2024 | Mountsberg Conservation Area</div>
+                <div className="text-center text-xl md:text-3xl font-semibold text-gray-100 z-20">Sunday, Oct. 19, 2025 - 3:30pm | Mountsberg Conservation Area</div>
             </div>
             <figure className="flex justify-center pb-6 lg:pb-0">
                 <div className="w-[230px] h-[230px] mx-16 rounded-full overflow-hidden border-2 border-gray-50">
