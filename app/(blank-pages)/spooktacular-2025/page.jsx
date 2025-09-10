@@ -15,7 +15,9 @@ const SpooktacularLandingPage = () => {
             </div>
             <figure className="flex justify-center pb-6 lg:pb-0">
                 <div className="w-[230px] h-[230px] mx-16 rounded-full overflow-hidden border-2 border-gray-50">
+                <Link href="/" target="_blank">
                     <img src="/images/oresta.jpg" alt="photo of Oresta Kisil" className="rounded-full w-[235px] pb-5" />
+                </Link>
                 </div>
             </figure>
         </header>
