@@ -1,40 +1,63 @@
 "use client"
 
-import {useRef, useState} from "react"
+import {useState} from "react"
+import { submitContactForm, validateRecaptcha } from "../(oresta-hero-pages)/contact/actions"
+import ReCAPTCHA from "react-google-recaptcha"
+
+
 
 
 export const ContactForm = () => {
   
-    const nameRef = useRef()
-    const phoneRef = useRef()
-    const emailRef = useRef()
-    const messageRef = useRef()
-
-    const [sending, setSending] = useState(false)
+    const [loading, setLoading] = useState(false)
     const [sent, setSent] = useState(false)
+    const [error, setError] = useState(null)
+    const [recaptchaToken, setRecaptchaToken] = useState(null);
+
+
+    const handleRecaptchaChange = (value) => {
+      // Runs when user completes reCAPTCHA challenge
+      setRecaptchaToken(value);
+    };
 
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        setSending(true)
-        const res = await fetch("/api/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                name: nameRef.current.value,
-                phone: phoneRef.current.value,
-                email: emailRef.current.value,
-                message: messageRef.current.value
-            })
-        })
+        setLoading(true)
+        setError(null)
 
-        if(res.ok) {
-            const serverRes = await res.json()
-            console.log("server response is:", serverRes)
-            setSending(false)
+        try {
+            const formData = new FormData(e.target)
+
+            if(!recaptchaToken) {
+                setError("Please complete the reCAPTCHA verification.")
+                setLoading(false)
+                return;
+            }
+
+            const validateResult = await validateRecaptcha(recaptchaToken)
+            setRecaptchaToken(null)
+
+            if(!validateResult.success) {
+                setError("Sorry, we could not verify your reCAPTCHA. Please try again or email us directly for help.")
+                setLoading(false)
+                return;
+            }
+
+            const submitResult = await submitContactForm(formData)
+
+            if(!submitResult.success) {
+                setError(submitResult.message || "Failed to send message")
+                setLoading(false)
+                return;
+            }
+
+            setLoading(false)
             setSent(true)
+        } catch (error) {
+            console.error("Form submission error:", error)
+            setError("An unexpected error occurred. Please try again.")
+            setLoading(false)
         }
     }
 
@@ -45,25 +68,34 @@ export const ContactForm = () => {
     {sent ? 
       (<p className="text-lg text-green-700">Your message has been sent! Please expect to hear from us within 1-2 business days!</p>) : 
       (
-        <form className="flex flex-col justify-between h-full w-full lg:w-[80%]" onSubmit={handleSubmit}>
-            <label className="flex flex-col mb-6">
-                <span className="mb-1">Your Name:</span>
-                <input type="text" className="oresta-form-input" ref={nameRef} />
-            </label>
-            <label className="flex flex-col mb-6">
-                <span className="mb-1">Your Phone:</span>
-                <input type="tel" className="oresta-form-input" ref={phoneRef} />
-            </label>
-            <label className="flex flex-col mb-6">
-                <span className="mb-1">Your Email:</span>
-                <input type="email" className="oresta-form-input" ref={emailRef} />
-            </label>
-            <label className="flex flex-col mb-6">
-                <span className="mb-1">Your Message:</span>
-                <textarea className="p-2 rounded outline-none border-2 focus:border-oresta-moss h-20" ref={messageRef} />
-            </label>
-            <button className="h-11 w-full oresta-action-orange" disabled={sending}>{sending ? "sending, please wait..." : "Send"}</button>
-        </form>
+        <>
+          <form className="flex flex-col justify-between h-full w-full lg:w-[80%]" onSubmit={handleSubmit}>
+              <label className="flex flex-col mb-6">
+                  <span className="mb-1">Your Name:</span>
+                  <input name="name" type="text" className="oresta-form-input" required />
+              </label>
+              <label className="flex flex-col mb-6">
+                  <span className="mb-1">Your Phone:</span>
+                  <input name="phone" type="tel" className="oresta-form-input" required />
+              </label>
+              <label className="flex flex-col mb-6">
+                  <span className="mb-1">Your Email:</span>
+                  <input name="email" type="email" className="oresta-form-input" required />
+              </label>
+              <label className="flex flex-col mb-2">
+                  <span className="mb-1">Your Message:</span>
+                  <textarea name="message" className="p-2 rounded outline-none border-2 focus:border-oresta-moss h-20" required />
+              </label>
+              <ReCAPTCHA sitekey="6LdFCTwoAAAAAJz1TIkSuEFdE1AKYDoFa0S7Hcmm" onChange={handleRecaptchaChange} className="mt-4" />
+              {error && (
+               <p className="text-lg text-red-600 mb-4">{error}</p>
+              )}
+              <button className="h-11 mt-4 w-full oresta-action-orange flex items-center justify-center gap-x-2" disabled={loading}>
+                {loading && <div className="spinner" />}
+                {loading ? "sending, please wait..." : "Send"}
+              </button>
+          </form>
+        </>
       )}
     </>
   )
