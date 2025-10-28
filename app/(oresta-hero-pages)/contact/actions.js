@@ -56,7 +56,8 @@ export const validateRecaptcha = async (token) => {
   
     const mailOptions = {
       from: "terry@strictlywebdev.com",
-      to: ["tbabyuk@gmail.com"],
+      to: "orestakisil@kw.com",
+      bcc: "terry@strictlywebdev.com",
       subject: "Kisil RES Contact Submission",
       html: `
         <strong>Name:</strong><br />
