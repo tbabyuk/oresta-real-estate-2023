@@ -7,8 +7,6 @@ import {SlLocationPin} from "react-icons/sl"
 
 export const Footer = () => {
 
-  const date = new Date()
-  const year = date.getFullYear()
 
   return (
     <footer className="min-h-[200px] bg-oresta-blue text-oresta-gray">
@@ -55,9 +53,15 @@ export const Footer = () => {
                 </ul>
             </div>
         </div>
-        <div className="p-5 md:py-4 gap-5 bg-black/50 flex flex-col-reverse md:flex-row md:justify-between text-white/40 text-sm">
-            <div className="flex justify-center items-center"><span className="italic">Website by</span>&nbsp;<a href="https://www.strictlywebdev.com/" target="_blank" className="flex items-center"><img src="/images/swd_logo_sm_color.png" className="h-[20px] filter grayscale" /><span className="font-bold">StrictlyWebDev</span></a></div>
-            <div className="flex justify-center items-center">&copy; {year} Oresta Kisil + Co.</div>
+        <div className="p-5 md:py-4 gap-5 bg-black/50 flex flex-col md:flex-row md:justify-between text-white/40 text-sm">
+            <div className="flex justify-center items-center">&copy; {new Date().getFullYear()} Oresta Kisil + Co.</div>
+            <div className="flex justify-center items-center">
+                <span className="italic">Website by</span>&nbsp;
+                <a href="https://www.strictlywebdev.com/" target="_blank" rel="noopener" className="flex items-center group">
+                    <img src="/images/swd_logo_sm_color.png" alt="StrictlyWebDev Logo" className="h-[20px] grayscale group-hover:grayscale-0 transition-all" />
+                    <span className="font-bold group-hover:text-gray-100 transition-all">StrictlyWebDev</span>
+                </a>
+            </div>
         </div>
     </footer>
   )
