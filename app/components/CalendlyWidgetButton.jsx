@@ -30,7 +30,7 @@ export default function CalendlyWidgetButton() {
         src="https://assets.calendly.com/assets/external/widget.js"
         strategy="afterInteractive"
       />
-      <button className="oresta-action-orange py-3 px-5" onClick={openCalendly}>Book a Free Consultation</button>
+      <button className="oresta-action-orange py-3 px-5" onClick={openCalendly}>Let&apos;s Chat <br className="block min-[400px]:hidden" />Real Estate</button>
     </>
   )
 }

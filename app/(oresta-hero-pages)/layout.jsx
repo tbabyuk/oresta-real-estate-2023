@@ -8,7 +8,9 @@ export default function TestLayout({ children }) {
       <>
         <Header />
         <Hero />
-          {children}
+          <main>
+            {children}
+          </main>
         <Footer />
       </>
     )

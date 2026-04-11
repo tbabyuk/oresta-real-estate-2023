@@ -15,14 +15,16 @@ const HappyClientsPage = async () => {
 
     return (
       <MotionWrapper>
-        <main className="px-5 xl:px-30 py-20 md:py-22 text-gray-600">
-          <PageHeading title="Happy Clients" />
-          <div className="flex justify-center flex-wrap gap-5">
-              {clientReviewsArray && 
-                  clientReviewsArray.map((review, index) => <ClientReviewCard key={index} review={review} />
-              )}
+        <div className="oresta-container">
+          <div className="oresta-inner-container">
+            <PageHeading title="Happy Clients" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {clientReviewsArray && 
+                    clientReviewsArray.map((review, index) => <ClientReviewCard key={index} review={review} />
+                )}
+            </div>
           </div>
-        </main>
+        </div>
       </MotionWrapper>
     )
   }

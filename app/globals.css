@@ -106,9 +106,12 @@ scrollbar-width: none;
     fill: #ECF2EF;
 }
 
-.oresta-section {
-    @apply px-5 md:px-20 py-[60px] relative; /* or more depending on the height of the SVG */
+.oresta-container {
+    @apply px-5 sm:px-10 py-[60px] relative;
+}
 
+.oresta-inner-container {
+    @apply max-w-[1100px] mx-auto;
 }
 
 .bg-oresta-light-green {
