@@ -2,6 +2,7 @@
 
 import Script from 'next/script'
 import { useState, useEffect } from 'react'
+import { CALENDLY_URL } from "@/lib/constants"
 
 
 
@@ -10,7 +11,7 @@ export default function CalendlyWidgetButton() {
 
   const openCalendly = () => {
     if (pageIsLoaded && window.Calendly) {
-      window.Calendly.initPopupWidget({ url: "https://calendly.com/orestakisilrealestate" })
+      window.Calendly.initPopupWidget({ url: CALENDLY_URL })
     }
   }
 

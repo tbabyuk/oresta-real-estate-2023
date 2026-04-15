@@ -2,6 +2,7 @@ import Link from "next/link"
 import {FiPhoneCall} from "react-icons/fi"
 import {TfiEmail} from "react-icons/tfi"
 import {SlLocationPin} from "react-icons/sl"
+import { PHONE_NUMBER, EMAIL, ADDRESS_STREET, ADDRESS_CITY, ADDRESS_POSTAL, GOOGLE_MAPS_URL } from "@/lib/constants"
 
 
 
@@ -41,13 +42,13 @@ export const Footer = () => {
             <div className="flex-1">
                 <h3 className="text-lg text-center mb-8">CONTACT:</h3>
                 <ul className="flex flex-col items-center gap-5">
-                    <a href="tel:+4163195784" className="flex flex-row items-center hover:text-oresta-moss"><FiPhoneCall className="me-2" /><li>(416) 319-5748</li></a>
-                    <a href="mailto:orestakisil@kw.com" className="flex flex-row items-center hover:text-oresta-moss"><TfiEmail className="me-2" /><li>orestakisil@kw.com</li></a>
-                    <a href="https://goo.gl/maps/ifTnaZTeuerQht1i9" target="_blank" className="flex flex-row hover:text-oresta-moss">
+                    <a href={`tel:${PHONE_NUMBER.raw}`} className="flex flex-row items-center hover:text-oresta-moss"><FiPhoneCall className="me-2" /><li>{PHONE_NUMBER.display}</li></a>
+                    <a href={`mailto:${EMAIL}`} className="flex flex-row items-center hover:text-oresta-moss"><TfiEmail className="me-2" /><li>{EMAIL}</li></a>
+                    <a href={GOOGLE_MAPS_URL} target="_blank" className="flex flex-row hover:text-oresta-moss">
                         <SlLocationPin className="me-2" />
-                        <li className="text-center">103 Lakeshore Rd. E,<br />
-                        Mississauga, ON<br />
-                        L5G 1E2
+                        <li className="text-center">{ADDRESS_STREET},<br />
+                        {ADDRESS_CITY}<br />
+                        {ADDRESS_POSTAL}
                         </li>
                     </a>
                 </ul>

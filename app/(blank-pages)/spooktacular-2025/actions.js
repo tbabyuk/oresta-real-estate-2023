@@ -1,6 +1,7 @@
 "use server"
 
 import nodemailer from "nodemailer";
+import { EMAIL } from "@/lib/constants";
 
 
 
@@ -46,7 +47,7 @@ export const registerSpooktacular = async (formData) => {
     
         const mailOptions = {
             from: "terry@strictlywebdev.com",
-            to: ["terry@strictlywebdev.com", "orestakisil@kw.com"],
+            to: ["terry@strictlywebdev.com", EMAIL],
             subject: "New Spooktacular Registration",
             html: `
             <strong>First Name:</strong><br />

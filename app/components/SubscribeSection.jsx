@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { EMAIL } from "@/lib/constants"
 
 
 export const SubscribeSection = () => {
@@ -61,7 +62,7 @@ export const SubscribeSection = () => {
                     (<p className="text-lg text-green-500 text-center">This email is already subscribed to our newsletter!</p>)
                 }
                 {failMessage && 
-                    (<p className="text-lg text-red-500 text-center">Ooops, something went wrong while trying to subscribe you!<br /> Please reach out to me directly at <span className="font-bold">orestakisil@kw.com</span> and request to be added to my newsletter.</p>)
+                    (<p className="text-lg text-red-500 text-center">Ooops, something went wrong while trying to subscribe you!<br /> Please reach out to me directly at <span className="font-bold">{EMAIL}</span> and request to be added to my newsletter.</p>)
                 }
                 {!successMessage && !emailExistsMessage && !failMessage && (
                         <form className="flex flex-col sm:flex-row justify-center items-center gap-y-4 gap-x-4" onSubmit={handleSubscribe}>

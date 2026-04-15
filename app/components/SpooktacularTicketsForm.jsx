@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { registerSpooktacular } from "@/app/(blank-pages)/spooktacular-2025/actions"
+import { PHONE_NUMBER } from "@/lib/constants"
 
 
 
@@ -44,7 +45,7 @@ export const SpooktacularTicketsForm = () => {
 
             {failMessage && (
                 <div className="bg-white p-6 rounded-md max-w-[600px] mx-auto">
-                    <p className="text-xl text-red-600">Ooops, something went wrong! Please try again or call Oresta directly at <a href="tel:+14163195748" className="font-bold">(416) 319-5748</a> to ask for tickets!</p>
+                    <p className="text-xl text-red-600">Ooops, something went wrong! Please try again or call Oresta directly at <a href={`tel:${PHONE_NUMBER.raw}`} className="font-bold">{PHONE_NUMBER.display}</a> to ask for tickets!</p>
                 </div>
             )}
 

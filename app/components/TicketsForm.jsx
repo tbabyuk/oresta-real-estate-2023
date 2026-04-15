@@ -4,6 +4,7 @@
 "use client"
 
 import {useRef, useState} from "react"
+import { PHONE_NUMBER } from "@/lib/constants"
 
 export const TicketsForm = () => {
   
@@ -57,7 +58,7 @@ export const TicketsForm = () => {
             }
 
             {failMessage && 
-                (<p className="text-lg text-red-500">Ooops, something went wrong! Please try again or call Oresta directly at <a href="tel:+14163195748" className="font-bold">(416) 319-5748</a> to ask for tickets!</p>)
+                (<p className="text-lg text-red-500">Ooops, something went wrong! Please try again or call Oresta directly at <a href={`tel:${PHONE_NUMBER.raw}`} className="font-bold">{PHONE_NUMBER.display}</a> to ask for tickets!</p>)
             }
 
             {!successMessage && !failMessage && 

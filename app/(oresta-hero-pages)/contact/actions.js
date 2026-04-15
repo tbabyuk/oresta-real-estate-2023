@@ -1,6 +1,7 @@
 "use server"
 
 import nodemailer from "nodemailer"
+import { EMAIL } from "@/lib/constants"
 
 
 
@@ -56,7 +57,7 @@ export const validateRecaptcha = async (token) => {
   
     const mailOptions = {
       from: "terry@strictlywebdev.com",
-      to: "orestakisil@kw.com",
+      to: EMAIL,
       bcc: "terry@strictlywebdev.com",
       subject: "Kisil RES Contact Submission",
       html: `

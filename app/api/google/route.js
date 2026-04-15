@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import nodemailer from "nodemailer"
+import { EMAIL } from "@/lib/constants"
 
 
 
@@ -22,7 +23,7 @@ export async function POST(request) {
 
     const mailOptions = {
     from: "terry@strictlywebdev.com",
-    to: "orestakisil@kw.com",
+    to: EMAIL,
     cc: "terry@strictlywebdev.com",
 
     subject: "New Smith Manoeuvre Webinar Registration",
