@@ -7,9 +7,9 @@ const audience_id = "cbf83989e1"
 
 export async function POST(request) {
 
-    const {email} = await request.json()
+    const {firstName, lastName, email} = await request.json()
 
-    console.log("Logging email to be subscribed from API:", email)
+    console.log("Logging subscriber from API:", firstName, lastName, email)
 
 
     client.setConfig({
@@ -22,6 +22,10 @@ export async function POST(request) {
         await client.lists.addListMember(audience_id, {
             email_address: email,
             status: "subscribed",
+            merge_fields: {
+                FNAME: firstName,
+                LNAME: lastName,
+            },
         });
         return NextResponse.json({message: "Subscription successful"}, {status: 200})
     } catch (error) {

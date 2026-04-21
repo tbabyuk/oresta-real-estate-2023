@@ -6,6 +6,8 @@ import { EMAIL } from "@/lib/constants"
 
 export const SubscribeSection = () => {
 
+    const [firstName, setFirstName] = useState("")
+    const [lastName, setLastName] = useState("")
     const [contactEmail, setContactEmail] = useState("")
     const [isPending, setIsPending] = useState(false)
     const [successMessage, setSuccessMessage] = useState(false)
@@ -24,6 +26,8 @@ export const SubscribeSection = () => {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
+                    firstName,
+                    lastName,
                     email: contactEmail
                 })
             })
@@ -65,15 +69,29 @@ export const SubscribeSection = () => {
                     (<p className="text-lg text-red-500 text-center">Ooops, something went wrong while trying to subscribe you!<br /> Please reach out to me directly at <span className="font-bold">{EMAIL}</span> and request to be added to my newsletter.</p>)
                 }
                 {!successMessage && !emailExistsMessage && !failMessage && (
-                        <form className="flex flex-col sm:flex-row justify-center items-center gap-y-4 gap-x-4" onSubmit={handleSubscribe}>
-                        <input 
-                            type="email" 
-                            className="h-10 w-full border-gray-300 oresta-form-input" 
-                            onChange={(e) => setContactEmail(e.target.value) }
-                            value={contactEmail}
-                            placeholder="enter your email address" 
-                            required />
-                        <button className="h-10 w-full rounded text-gray-100 bg-oresta-moss hover:bg-oresta-moss-2" disabled={isPending}>{isPending ? "One Minute..." : "SUBSCRIBE"}</button>
+                        <form className="grid grid-cols-1 sm:grid-cols-2 gap-4" onSubmit={handleSubscribe}>
+                                <input 
+                                    type="text" 
+                                    className="h-10 border-gray-300 oresta-form-input" 
+                                    onChange={(e) => setFirstName(e.target.value) }
+                                    value={firstName}
+                                    placeholder="first name" 
+                                    required />
+                                <input 
+                                    type="text" 
+                                    className="h-10 border-gray-300 oresta-form-input" 
+                                    onChange={(e) => setLastName(e.target.value) }
+                                    value={lastName}
+                                    placeholder="last name" 
+                                    required />
+                                <input 
+                                    type="email" 
+                                    className="h-10 border-gray-300 oresta-form-input" 
+                                    onChange={(e) => setContactEmail(e.target.value) }
+                                    value={contactEmail}
+                                    placeholder="email address" 
+                                    required />
+                                <button className="h-10 rounded border-2 border-transparent text-gray-100 bg-oresta-moss hover:bg-oresta-moss-2" disabled={isPending}>{isPending ? "One Minute..." : "SUBSCRIBE"}</button>
                         </form>
                     )
                 }
