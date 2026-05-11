@@ -6,6 +6,10 @@ const MarketWatchPage = () => {
 
   const marketWatchReports = [
     {
+        title: "April 2026 Market Watch Report",
+        link: "/documents/market-watch-april-2026.pdf"
+    },
+    {
         title: "March 2026 Market Watch Report",
         link: "/documents/market-watch-march-2026.pdf"
     },
