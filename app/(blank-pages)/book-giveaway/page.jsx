@@ -83,7 +83,7 @@ const BookGiveawayPage = () => {
             </aside>
 
             {/* CONTENT — full width on mobile, right half on desktop */}
-            <main className="lg:ml-[50%] lg:w-1/2 min-h-screen flex flex-col bg-white">
+            <main className="lg:ml-[50%] lg:w-1/2 min-h-screen flex flex-col bg-white overflow-hidden">
 
                 {/* Logo strip — same width as form column */}
                 <div className="px-6 sm:px-10 pt-8 pb-2">
@@ -110,7 +110,7 @@ const BookGiveawayPage = () => {
                                         Summer Giveaway
                                     </span>
                                     <h1 className="text-3xl md:text-4xl text-oresta-blue font-light leading-tight mb-4">
-                                        Win a Copy of{" "}
+                                        Win a copy of{" "}
                                         <span className="font-medium italic">Detour Diaries: Ontario</span>
                                     </h1>
                                     <p className="text-gray-600 leading-7">
@@ -134,7 +134,7 @@ const BookGiveawayPage = () => {
                                             <input
                                                 type="text"
                                                 name="fullName"
-                                                className="oresta-form-input bg-gray-50"
+                                                className="w-full oresta-form-input bg-gray-50"
                                                 required
                                             />
                                         </label>
@@ -146,7 +146,7 @@ const BookGiveawayPage = () => {
                                             <input
                                                 type="email"
                                                 name="email"
-                                                className="oresta-form-input bg-gray-50"
+                                                className="w-full oresta-form-input bg-gray-50"
                                                 required
                                             />
                                         </label>
@@ -158,7 +158,7 @@ const BookGiveawayPage = () => {
                                             <input
                                                 type="tel"
                                                 name="phone"
-                                                className="oresta-form-input bg-gray-50"
+                                                className="w-full oresta-form-input bg-gray-50"
                                                 required
                                             />
                                         </label>
@@ -210,7 +210,7 @@ const BookGiveawayPage = () => {
                                             <select
                                                 name="intent"
                                                 defaultValue=""
-                                                className="oresta-form-input bg-gray-50"
+                                                className="w-full oresta-form-input bg-gray-50"
                                                 required
                                             >
                                                 <option value="" disabled>Select an option</option>
@@ -229,7 +229,7 @@ const BookGiveawayPage = () => {
                                             <select
                                                 name="timeline"
                                                 defaultValue=""
-                                                className="oresta-form-input bg-gray-50"
+                                                className="w-full oresta-form-input bg-gray-50"
                                                 required
                                             >
                                                 <option value="" disabled>Select a timeline</option>
@@ -249,7 +249,7 @@ const BookGiveawayPage = () => {
                                                 name="areaInterest"
                                                 value={areaInterest}
                                                 onChange={(e) => setAreaInterest(e.target.value)}
-                                                className="oresta-form-input bg-gray-50"
+                                                className="w-full oresta-form-input bg-gray-50"
                                                 required
                                             >
                                                 <option value="" disabled>Select an area</option>
@@ -268,7 +268,7 @@ const BookGiveawayPage = () => {
                                                     type="text"
                                                     name="areaInterestOther"
                                                     placeholder="e.g. Hamilton, Barrie, etc."
-                                                    className="oresta-form-input bg-gray-50"
+                                                    className="w-full oresta-form-input bg-gray-50"
                                                     required
                                                 />
                                             </label>
@@ -289,7 +289,7 @@ const BookGiveawayPage = () => {
                                                 type="text"
                                                 name="summerDestination"
                                                 placeholder="e.g. Tobermory, Prince Edward County, Algonquin..."
-                                                className="oresta-form-input bg-gray-50"
+                                                className="w-full oresta-form-input bg-gray-50"
                                             />
                                         </label>
 
@@ -300,7 +300,7 @@ const BookGiveawayPage = () => {
                                             <select
                                                 name="referralSource"
                                                 defaultValue=""
-                                                className="oresta-form-input bg-gray-50"
+                                                className="w-full oresta-form-input bg-gray-50"
                                                 required
                                             >
                                                 <option value="" disabled>Select an option</option>
